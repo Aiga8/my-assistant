@@ -1,0 +1,291 @@
+[
+  {
+    "section_id": 0,
+    "title": "Window link URL reflects active window tab (new format)",
+    "custom_preconds": "Пользователь авторизован в DrillSpot.\nОткрыт проект P1 (имеет доступ).\nВ Workspace открыта вкладка *Window* (окно) W1, привязанная к wellbore WB1.\nВ браузере отображается адресная строка.",
+    "type_id": 7,
+    "priority_id": 2,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "custom_labels": [],
+    "refs": "DS-9914",
+    "custom_steps_separated": [
+      {
+        "content": "Сделать активной вкладку окна W1 и проверить URL в адресной строке.",
+        "expected": "URL соответствует новому формату ссылки на окно и содержит идентификаторы проекта, окна и wellbore (пример: `/project/<projectUuid>/windows/<windowUuid>/wellbore/<wellboreUuid>`), без параметра зоны `z`."
+      }
+    ]
+  },
+  {
+    "section_id": 0,
+    "title": "Window link URL updates when switching between two window tabs",
+    "custom_preconds": "Пользователь авторизован в DrillSpot.\nОткрыт проект P1.\nВ одной группе вкладок открыты два окна: W1 (wellbore WB1) и W2 (wellbore WB2).\nВ браузере отображается адресная строка.",
+    "type_id": 7,
+    "priority_id": 2,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "custom_labels": [],
+    "refs": "DS-9914",
+    "custom_steps_separated": [
+      {
+        "content": "Поочередно сделать активными вкладки W1 и W2 и сравнить URL в адресной строке.",
+        "expected": "При переключении активной вкладки URL меняется и отражает идентификаторы окна и wellbore именно активной вкладки."
+      }
+    ]
+  },
+  {
+    "section_id": 0,
+    "title": "Open window link when target window is already open (focus and datasource update)",
+    "custom_preconds": "Пользователь авторизован в DrillSpot.\nОткрыт проект P1.\nВ Workspace уже открыта вкладка окна W1.\nЕсть корректная прямая ссылка на W1 с wellbore WB2 (WB2 доступен в P1 и отличается от текущего wellbore вкладки W1).",
+    "type_id": 7,
+    "priority_id": 2,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "custom_labels": [],
+    "refs": "DS-9914",
+    "custom_steps_separated": [
+      {
+        "content": "Открыть прямую ссылку на окно W1 с wellbore WB2 в браузере.",
+        "expected": "Приложение переключает фокус на уже открытую вкладку окна W1 и устанавливает для нее wellbore WB2 (DataSource обновлён согласно ссылке)."
+      }
+    ]
+  },
+  {
+    "section_id": 0,
+    "title": "Open window link when target window is not open (new tab is created)",
+    "custom_preconds": "Пользователь авторизован в DrillSpot.\nОткрыт проект P1.\nВ Workspace отсутствует вкладка окна W1.\nЕсть корректная прямая ссылка на W1 с wellbore WB1 (оба доступны).",
+    "type_id": 7,
+    "priority_id": 2,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "custom_labels": [],
+    "refs": "DS-9914",
+    "custom_steps_separated": [
+      {
+        "content": "Открыть прямую ссылку на окно W1 с wellbore WB1 в браузере.",
+        "expected": "В Workspace создается новая вкладка окна W1, и ее DataSource установлен на WB1 из ссылки."
+      }
+    ]
+  },
+  {
+    "section_id": 0,
+    "title": "Window link has priority over saved navigation settings",
+    "custom_preconds": "Пользователь авторизован в DrillSpot.\nОткрыт проект P1.\nУ пользователя ранее сохранен другой wellbore как последний выбранный (например, WB1).\nЕсть прямая ссылка на окно W1 с wellbore WB2 (доступен в P1).",
+    "type_id": 7,
+    "priority_id": 2,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "custom_labels": [],
+    "refs": "DS-9914",
+    "custom_steps_separated": [
+      {
+        "content": "Открыть приложение по прямой ссылке на W1 с wellbore WB2.",
+        "expected": "Окно открывается с wellbore WB2 из URL, даже если в сохраненных настройках был другой wellbore."
+      }
+    ]
+  },
+  {
+    "section_id": 0,
+    "title": "Open window link without access to project shows error",
+    "custom_preconds": "Пользователь авторизован в DrillSpot.\nЕсть прямая ссылка на окно W1 в проекте P2, к которому у пользователя нет доступа.",
+    "type_id": 7,
+    "priority_id": 2,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "custom_labels": [],
+    "refs": "DS-9914",
+    "custom_steps_separated": [
+      {
+        "content": "Открыть прямую ссылку на окно в недоступном проекте P2.",
+        "expected": "Отображается ошибка доступа; данные окна не открываются."
+      }
+    ]
+  },
+  {
+    "section_id": 0,
+    "title": "Open window link without access to window shows error",
+    "custom_preconds": "Пользователь авторизован в DrillSpot.\nОткрыт проект P1.\nЕсть прямая ссылка на окно W_private другого пользователя (или иной объект), к которому у текущего пользователя нет доступа.",
+    "type_id": 7,
+    "priority_id": 2,
+    "custom_automation": 0,
+    "custom_automation_type": 0,
+    "custom_labels": [],
+    "refs": "DS-9914",
+    "custom_steps_separated": [
+      {
+        "content": "Открыть прямую ссылку на недоступное окно.",
+        "expected": "Отображается ошибка доступа; окно не добавляется в Workspace."
+      }
+    ]
+  },
+  {
+    "section_id": 0,
+    "title": "Open window link with inaccessible wellbore shows error",
+    "custom_preconds": "Пользователь авторизован в DrillSpot.\nОткрыт проект P1.\nЕсть прямая ссылка на доступное окно W1, но wellbore в URL недоступен пользователю (например, удален или нет прав на WBX).",
+    "type_id": 7,
+    "priority_id": 2,
+    "custom_automation": 0,
+    "custom_automation_type": 0,
+    "custom_labels": [],
+    "refs": "DS-9914",
+    "custom_steps_separated": [
+      {
+        "content": "Открыть прямую ссылку на W1 с недоступным wellbore WBX.",
+        "expected": "Отображается ошибка доступа; приложение не открывает окно с указанными данными."
+      }
+    ]
+  },
+  {
+    "section_id": 0,
+    "title": "Open window link with malformed identifiers is handled gracefully",
+    "custom_preconds": "Пользователь авторизован в DrillSpot.\nЕсть ссылка нового формата, в которой `projectUuid` или `windowUuid` или `wellboreUuid` задан некорректно (например, `not-a-uuid`).",
+    "type_id": 7,
+    "priority_id": 3,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "custom_labels": [],
+    "refs": "DS-9914",
+    "custom_steps_separated": [
+      {
+        "content": "Открыть ссылку нового формата с некорректным идентификатором.",
+        "expected": "Приложение не падает и отображает понятное сообщение об ошибке или страницу ошибки; данные окна не загружаются."
+      }
+    ]
+  },
+  {
+    "section_id": 0,
+    "title": "Legacy dashboard link with zone and wellbore opens corresponding window view",
+    "custom_preconds": "Пользователь авторизован в DrillSpot.\nОткрыт проект P1.\nЕсть legacy-ссылка старого формата на дашборд с параметрами `?z=<zoneUuid>&w=<wellboreUuid>`, где `zoneUuid` и `wellboreUuid` доступны пользователю.\nВ браузере отображается адресная строка.",
+    "type_id": 7,
+    "priority_id": 2,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "custom_labels": [],
+    "refs": "DS-9914",
+    "custom_steps_separated": [
+      {
+        "content": "Открыть legacy-ссылку старого формата.",
+        "expected": "Приложение открывает соответствующий вид (окно) и применяет wellbore из ссылки; адресная строка соответствует новому формату ссылки без параметров зоны."
+      }
+    ]
+  },
+  {
+    "section_id": 0,
+    "title": "Legacy dashboard link with non-accessible zone shows error",
+    "custom_preconds": "Пользователь авторизован в DrillSpot.\nЕсть legacy-ссылка старого формата `?z=<zoneUuid>&w=<wellboreUuid>`, где `zoneUuid` недоступен пользователю (нет прав).",
+    "type_id": 7,
+    "priority_id": 3,
+    "custom_automation": 0,
+    "custom_automation_type": 0,
+    "custom_labels": [],
+    "refs": "DS-9914",
+    "custom_steps_separated": [
+      {
+        "content": "Открыть legacy-ссылку с недоступной зоной.",
+        "expected": "Отображается ошибка доступа; данные не открываются."
+      }
+    ]
+  },
+  {
+    "section_id": 0,
+    "title": "Window link in pop-out window has its own independent address bar",
+    "custom_preconds": "Пользователь авторизован в DrillSpot (Web).\nОткрыт проект P1.\nЕсть основное окно приложения и отдельное Pop-out окно, в котором открыта вкладка окна W1.\nВ обоих окнах отображается адресная строка браузера.",
+    "type_id": 7,
+    "priority_id": 3,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "custom_labels": [],
+    "refs": "DS-9914",
+    "custom_steps_separated": [
+      {
+        "content": "Сделать активной вкладку W1 в Pop-out окне и проверить URL в адресной строке Pop-out окна и основного окна.",
+        "expected": "URL в Pop-out окне отражает активную вкладку внутри Pop-out; URL в основном окне отражает активную вкладку внутри основного окна (адресные строки независимы)."
+      }
+    ]
+  },
+  {
+    "section_id": 0,
+    "title": "Opening window link that switches project updates project context across all windows",
+    "custom_preconds": "Пользователь авторизован в DrillSpot.\nОткрыто основное окно и минимум одно Pop-out окно.\nОсновной контекст проекта: P1.\nЕсть прямая ссылка нового формата на окно в проекте P2, к которому у пользователя есть доступ.",
+    "type_id": 7,
+    "priority_id": 3,
+    "custom_automation": 0,
+    "custom_automation_type": 0,
+    "custom_labels": [],
+    "refs": "DS-9914",
+    "custom_steps_separated": [
+      {
+        "content": "Открыть в любом из окон (основном или Pop-out) прямую ссылку на проект P2.",
+        "expected": "Контекст активного проекта переключается на P2 во всей группе окон WorkSpace (основное и все Pop-out окна работают в одном проекте)."
+      }
+    ]
+  },
+  {
+    "section_id": 0,
+    "title": "Closing pop-out window does not lose tabs and preserves access to window links",
+    "custom_preconds": "Пользователь авторизован в DrillSpot (Web).\nОткрыт проект P1.\nОдна или несколько вкладок вынесены в Pop-out окно.\nЕсть возможность скопировать URL активной вкладки (адресная строка видима).",
+    "type_id": 7,
+    "priority_id": 3,
+    "custom_automation": 0,
+    "custom_automation_type": 0,
+    "custom_labels": [],
+    "refs": "DS-9914",
+    "custom_steps_separated": [
+      {
+        "content": "Закрыть Pop-out окно и затем проверить, что вкладки из него доступны в основном окне и для активной вкладки формируется корректный URL нового формата.",
+        "expected": "Все вкладки из Pop-out окна возвращены в основное окно и доступны; URL активной вкладки формируется корректно по новому формату."
+      }
+    ]
+  },
+  {
+    "section_id": 0,
+    "title": "Reloading the page returns pop-out tabs to the main window without losing them",
+    "custom_preconds": "Пользователь авторизован в DrillSpot (Web).\nОткрыт проект P1.\nЕсть Pop-out окно с вынесенными вкладками.",
+    "type_id": 7,
+    "priority_id": 3,
+    "custom_automation": 0,
+    "custom_automation_type": 0,
+    "custom_labels": [],
+    "refs": "DS-9914",
+    "custom_steps_separated": [
+      {
+        "content": "Перезагрузить страницу приложения и проверить состав вкладок в основном окне.",
+        "expected": "После перезагрузки все вкладки собраны в одном (главном) окне приложения; вкладки из Pop-out не теряются."
+      }
+    ]
+  },
+  {
+    "section_id": 0,
+    "title": "Window link does not include zone information in URL",
+    "custom_preconds": "Пользователь авторизован в DrillSpot.\nОткрыт проект P1.\nОткрыта вкладка окна W1.\nВ браузере отображается адресная строка.",
+    "type_id": 7,
+    "priority_id": 2,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "custom_labels": [],
+    "refs": "DS-9914",
+    "custom_steps_separated": [
+      {
+        "content": "Проверить, что в URL активной вкладки отсутствуют query-параметры, связанные с зонами (например, `z=...`).",
+        "expected": "URL не содержит параметров зоны; ссылка формируется только на основе проекта, окна и wellbore."
+      }
+    ]
+  },
+  {
+    "section_id": 0,
+    "title": "Window link can be shared and opened in a separate browser session",
+    "custom_preconds": "Пользователь авторизован в DrillSpot.\nОткрыт проект P1.\nОткрыта вкладка окна W1 с wellbore WB1.\nЕсть возможность открыть ссылку в отдельной сессии (например, режим инкогнито или другой браузер) под пользователем с доступом к P1/W1/WB1.",
+    "type_id": 7,
+    "priority_id": 2,
+    "custom_automation": 0,
+    "custom_automation_type": 0,
+    "custom_labels": [],
+    "refs": "DS-9914",
+    "custom_steps_separated": [
+      {
+        "content": "Скопировать URL активной вкладки окна W1 и открыть его в отдельной сессии браузера под пользователем с доступом.",
+        "expected": "Приложение открывается по ссылке и отображает окно W1 с wellbore WB1."
+      }
+    ]
+  }
+]

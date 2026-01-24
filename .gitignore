@@ -1,0 +1,55 @@
+# Файлы операционной системы
+.DS_Store
+Thumbs.db
+
+# Зависимости Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Скомпилированные файлы TypeScript
+dist/
+build/
+*.js.map
+*.d.ts.map
+*.tsbuildinfo
+
+# Переменные окружения (важные данные)
+.env
+.env.local
+.env.*.local
+
+# Конфигурационные файлы (не коммитить)
+config.ts
+
+# Логи
+*.log
+
+# Временные файлы
+.tmp/
+temp/
+*.tmp
+.temp_*
+
+
+# Редакторы и IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Результаты тестирования и покрытие
+coverage/
+.nyc_output/
+
+# Скомпилированные JavaScript файлы (если есть)
+*.js
+
+# Некоторые ресурсы
+_tmp
+scripts/
+shared/
