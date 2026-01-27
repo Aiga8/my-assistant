@@ -1,0 +1,161 @@
+[
+  {
+    "section_id": 37990,
+    "title": "Sections & Runs opens via direct link without saving tabs to drillspot-settings",
+    "type_id": 9,
+    "priority_id": 2,
+    "refs": "DS-11050,DS-11052",
+    "case_status_id": 2,
+    "case_assignedto_id": 61,
+    "custom_automation": 2,
+    "custom_automation_type": 5,
+    "custom_labels": [],
+    "custom_fix_versions": [69, 73],
+    "custom_comments": "Autotest: tests/Tabs/service-tabs.spec.ts::should open S&R tab in UI without saving to drillspot-settings",
+    "custom_preconds": "В drillspot-settings нет сохранённых сервисных вкладок",
+    "custom_steps_separated": [
+      {
+        "content": "Перейти по ссылке /projects/<projectUuid>/sections-and-runs/<wellboreUuid>",
+        "expected": "- Открыта сервисная таба Sections & Runs\n- Открыта ровно одна вкладка\n- В POST /drillspot-settings поле tabs остаётся пустым массивом ([])"
+      }
+    ]
+  },
+  {
+    "section_id": 37990,
+    "title": "Trajectory opens via direct link without saving tabs to drillspot-settings",
+    "type_id": 9,
+    "priority_id": 2,
+    "refs": "DS-11050,DS-11053",
+    "case_status_id": 2,
+    "case_assignedto_id": 61,
+    "custom_automation": 2,
+    "custom_automation_type": 5,
+    "custom_labels": [],
+    "custom_fix_versions": [69, 73],
+    "custom_comments": "Autotest: tests/Tabs/service-tabs.spec.ts::should open Trajectory tab in UI without saving to drillspot-settings",
+    "custom_preconds": "В drillspot-settings нет сохранённых сервисных вкладок",
+    "custom_steps_separated": [
+      {
+        "content": "Перейти по ссылке /projects/<projectUuid>/trajectory/<wellboreUuid>",
+        "expected": "- Открыта сервисная таба Trajectory\n- Открыта ровно одна вкладка\n- В POST /drillspot-settings поле tabs остаётся пустым массивом ([])"
+      }
+    ]
+  },
+  {
+    "section_id": 37990,
+    "title": "Mud Reports opens via direct link without saving tabs to drillspot-settings",
+    "type_id": 9,
+    "priority_id": 2,
+    "refs": "DS-11050",
+    "case_status_id": 2,
+    "case_assignedto_id": 61,
+    "custom_automation": 2,
+    "custom_automation_type": 5,
+    "custom_labels": [],
+    "custom_fix_versions": [69],
+    "custom_comments": "Autotest: tests/Tabs/service-tabs.spec.ts::should open Mud Reports tab in UI without saving to drillspot-settings",
+    "custom_preconds": "В drillspot-settings нет сохранённых сервисных вкладок",
+    "custom_steps_separated": [
+      {
+        "content": "Перейти по ссылке /projects/<projectUuid>/mud-reports/<wellboreUuid>",
+        "expected": "- Открыта сервисная таба Mud Reports\n- Открыта ровно одна вкладка\n- В POST /drillspot-settings поле tabs остаётся пустым массивом ([])"
+      }
+    ]
+  },
+  {
+    "section_id": 37990,
+    "title": "Rigs opens via direct link without saving tabs to drillspot-settings",
+    "type_id": 9,
+    "priority_id": 2,
+    "refs": "DS-11050",
+    "case_status_id": 2,
+    "case_assignedto_id": 61,
+    "custom_automation": 2,
+    "custom_automation_type": 5,
+    "custom_labels": [],
+    "custom_fix_versions": [69, 73],
+    "custom_comments": "Autotest: tests/Tabs/service-tabs.spec.ts::should open Rigs tab in UI without saving to drillspot-settings",
+    "custom_preconds": "В drillspot-settings нет сохранённых сервисных вкладок",
+    "custom_steps_separated": [
+      {
+        "content": "Перейти по ссылке /projects/<projectUuid>/rigs/list",
+        "expected": "- Открыта сервисная таба Rigs\n- Открыта ровно одна вкладка\n- В POST /drillspot-settings поле tabs остаётся пустым массивом ([])"
+      }
+    ]
+  },
+  {
+    "section_id": 37990,
+    "title": "Rigs tab is singleton when navigating via direct link (no duplicate tabs)",
+    "type_id": 9,
+    "priority_id": 2,
+    "refs": "DS-11050,DS-11054",
+    "case_status_id": 2,
+    "case_assignedto_id": 61,
+    "custom_automation": 2,
+    "custom_automation_type": 5,
+    "custom_labels": [],
+    "custom_fix_versions": [69, 73],
+    "custom_comments": "Autotest: tests/Tabs/rigs.spec.ts::should focus existing Rigs tab when trying to open another one\nAutotest: tests/Tabs/rigs.spec.ts::should not create duplicate Rigs tabs when navigating multiple times",
+    "custom_preconds": "Открыт проект",
+    "custom_steps_separated": [
+      {
+        "content": "Перейти по ссылке /projects/<projectUuid>/rigs/list",
+        "expected": "- Открыта вкладка Rigs\n- В панели вкладок отображается 1 вкладка"
+      },
+      {
+        "content": "Перейти на другую страницу проекта и затем снова перейти по ссылке /projects/<projectUuid>/rigs/list",
+        "expected": "- Вкладка Rigs не дублируется\n- В панели вкладок по-прежнему отображается 1 вкладка"
+      }
+    ]
+  },
+  {
+    "section_id": 37990,
+    "title": "Sections & Runs tab does not duplicate when opening via direct link for same wellbore",
+    "type_id": 9,
+    "priority_id": 2,
+    "refs": "DS-11050,DS-11052",
+    "case_status_id": 2,
+    "case_assignedto_id": 61,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "custom_labels": [],
+    "custom_fix_versions": [69, 73],
+    "custom_comments": null,
+    "custom_preconds": "Открыт проект\nВыбран wellbore",
+    "custom_steps_separated": [
+      {
+        "content": "Перейти по ссылке /projects/<projectUuid>/sections-and-runs/<wellboreUuid>",
+        "expected": "- Открыта вкладка Sections & Runs\n- В панели вкладок отображается 1 вкладка"
+      },
+      {
+        "content": "Перейти на другую страницу проекта и затем снова перейти по ссылке /projects/<projectUuid>/sections-and-runs/<wellboreUuid>",
+        "expected": "- Вкладка Sections & Runs для этого wellbore не дублируется\n- В панели вкладок по-прежнему отображается 1 вкладка"
+      }
+    ]
+  },
+  {
+    "section_id": 37990,
+    "title": "Trajectory tab does not duplicate when opening via direct link for same wellbore",
+    "type_id": 9,
+    "priority_id": 2,
+    "refs": "DS-11050,DS-11053",
+    "case_status_id": 2,
+    "case_assignedto_id": 61,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "custom_labels": [],
+    "custom_fix_versions": [69, 73],
+    "custom_comments": null,
+    "custom_preconds": "Открыт проект\nВыбран wellbore",
+    "custom_steps_separated": [
+      {
+        "content": "Перейти по ссылке /projects/<projectUuid>/trajectory/<wellboreUuid>",
+        "expected": "- Открыта вкладка Trajectory\n- В панели вкладок отображается 1 вкладка"
+      },
+      {
+        "content": "Перейти на другую страницу проекта и затем снова перейти по ссылке /projects/<projectUuid>/trajectory/<wellboreUuid>",
+        "expected": "- Вкладка Trajectory для этого wellbore не дублируется\n- В панели вкладок по-прежнему отображается 1 вкладка"
+      }
+    ]
+  }
+]

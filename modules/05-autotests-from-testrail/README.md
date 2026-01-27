@@ -28,7 +28,8 @@
 3) изучить аналитику
 4) изучить тесты (кейсы) в секции TestRail
 5) при необходимости запросить/проверить DOM и `data-testid`/`test-id`
-6) написать автотест(ы) по промту (сохранить результат в `results/05-autotests-from-testrail`)
+6) если найден `NEEDED data-testid`/`MISSING data-testid` — создать Jira-задачу на добавление атрибутов (см. пример `DS-12116`)
+7) написать автотест(ы) по промту (сохранить результат в `results/05-autotests-from-testrail`)
 
 ---
 
@@ -86,7 +87,26 @@
 
 ---
 
-### Шаг 6 — Написание автотестов
+### Шаг 6 — Создание Jira-задачи на добавление `data-testid`/`test-id` (если нужно)
+
+Если по результатам проверки выявлен `NEEDED data-testid`/`MISSING data-testid`, создай отдельную Jira-задачу на разметку UI-элементов атрибутами `data-testid` или `test-id`.
+
+Пример задачи:
+
+- `DS-12116` (`https://starsteer.atlassian.net/browse/DS-12116`)
+  - **Labels**: autotest
+  - **Parent**: `DS-9340 Drillspot. Autotests.`
+  - **Summary**: `Drillspot. Autotest. Add test-attribute for UI-elements from Traces List/ Messages`
+  - **Description** (шаблон):
+    - `Прилагаю список элементов и примерный data-testid:`
+      - `<тут список элементов + предлагаемые data-testid/test-id>`
+    - `Обязательно, чтобы значение атрибута было информативным и без дубликатов (существовало в единственном экзем. в DOM, если это единственный элемент.)`
+    - `Screenshots:`
+      - `<тут добавить скриншоты>`
+
+---
+
+### Шаг 7 — Написание автотестов
 
 Промт для генерации автотестов:
 

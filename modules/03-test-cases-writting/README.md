@@ -275,14 +275,24 @@ TestRail поддерживает форматирование текста в �
 Если нужен пример структуры для bulk-операции MCP `add_cases`, используй такой каркас (поля могут отличаться в зависимости от кастомных полей проекта):
 
 ```json
-[
-  {
-    "title": "Example title",
+{
+  "create": {
+    "section_id": 12345,
+    "title": "Title",
     "type_id": 9,
     "priority_id": 2,
-    "custom_steps_separated": [
-      { "content": "Step 1", "expected": "Expected 1" }
-    ]
+    "refs": "DS-1234",
+    "custom_fields": {
+      "case_status_id": 2,
+      "case_assignedto_id": 61,
+      "custom_automation": 1,
+      "custom_automation_type": 0,
+      "custom_labels": [145],
+      "custom_fix_versions": [62],
+      "custom_preconds": "строка\\nстрока",
+      "custom_steps_separated": [
+        { "content": "Шаг", "expected": "Ожидаемый результат" }
+      ]
+    }
   }
-]
 ```

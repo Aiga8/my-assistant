@@ -1,0 +1,84 @@
+[
+  {
+    "update": {
+      "case_id": 377460,
+      "fields": {
+        "title": "Opened indicator is shown only for opened PRIVATE dashboard when PUBLIC has same name",
+        "type_id": 9,
+        "priority_id": 2,
+        "refs": "DS-11004",
+        "case_status_id": 3,
+        "case_assignedto_id": 54,
+        "custom_automation": 2,
+        "custom_automation_type": 5,
+        "custom_labels": [],
+        "labels": [56, 87],
+        "custom_fix_versions": [69],
+        "custom_comments": "Autotest: playwright/tests/Tabs/dashboard-dropdown-opened-state.spec.ts::should highlight only the opened private window when public window has same name",
+        "custom_preconds": "В системе есть публичный и приватный дашборды с одинаковыми именами\nОткрыт приватный дашборд\nМеню добавления вкладки доступно",
+        "custom_steps_separated": [
+          {
+            "content": "Открыть меню добавления вкладок («+»)",
+            "expected": "- В списке отображаются оба дашборда с одинаковым именем\n- Только у открытого приватного дашборда отображается индикатор Opened\n- У публичного дашборда индикатор Opened не отображается"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "create": {
+      "section_id": 34173,
+      "title": "Opened indicator is shown only for opened PUBLIC dashboard when PRIVATE has same name",
+      "type_id": 9,
+      "priority_id": 2,
+      "refs": "DS-11004",
+      "custom_fields": {
+        "case_status_id": 3,
+        "case_assignedto_id": 54,
+        "custom_automation": 2,
+        "custom_automation_type": 5,
+        "custom_labels": [],
+        "labels": [56, 87],
+        "custom_fix_versions": [69],
+        "custom_comments": "Autotest: playwright/tests/Tabs/dashboard-dropdown-opened-state.spec.ts::should highlight only the opened public window when private window has same name",
+        "custom_preconds": "В системе есть публичный и приватный дашборды с одинаковыми именами\nОткрыт публичный дашборд\nМеню добавления вкладки доступно",
+        "custom_steps_separated": [
+          {
+            "content": "Открыть меню добавления вкладок («+»)",
+            "expected": "- В списке отображаются оба дашборда с одинаковым именем\n- Только у открытого публичного дашборда отображается индикатор Opened\n- У приватного дашборда индикатор Opened не отображается"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "create": {
+      "section_id": 34173,
+      "title": "Opened indicator updates correctly when switching between same-named dashboards",
+      "type_id": 9,
+      "priority_id": 2,
+      "refs": "DS-11004",
+      "custom_fields": {
+        "case_status_id": 3,
+        "case_assignedto_id": 54,
+        "custom_automation": 2,
+        "custom_automation_type": 5,
+        "custom_labels": [],
+        "labels": [56, 87],
+        "custom_fix_versions": [69],
+        "custom_comments": "Autotest: playwright/tests/Tabs/dashboard-dropdown-opened-state.spec.ts::should update opened state correctly when switching between same-named windows",
+        "custom_preconds": "В системе есть публичный и приватный дашборды с одинаковыми именами\nОткрыт приватный дашборд\nМеню добавления вкладки доступно",
+        "custom_steps_separated": [
+          {
+            "content": "В меню добавления вкладок выбрать публичный дашборд с тем же именем",
+            "expected": "- Публичный дашборд открывается во вкладке"
+          },
+          {
+            "content": "Открыть меню добавления вкладок («+»)",
+            "expected": "- В списке отображаются оба дашборда с одинаковым именем\n- У обоих дашбордов отображается индикатор Opened"
+          }
+        ]
+      }
+    }
+  }
+]

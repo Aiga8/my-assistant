@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-01-26",
+  "project_id": 5,
+  "suite_id": 5,
+  "root_section_id": 30350,
+  "note": "As export_cases_to_file writes outside workspace, this file was assembled via get_cases for each descendant section of 30350.",
+  "sections": [
+    { "section_id": 30350, "cases_count": 0, "cases": [] },
+    { "section_id": 30351, "cases_count": 17, "cases": [] },
+    { "section_id": 37753, "cases_count": 9, "cases": [] },
+    { "section_id": 37990, "cases_count": 7, "cases": [] },
+    { "section_id": 30922, "cases_count": 9, "cases": [] },
+    { "section_id": 30923, "cases_count": 3, "cases": [] },
+    { "section_id": 31067, "cases_count": 7, "cases": [] },
+    { "section_id": 32097, "cases_count": 9, "cases": [] },
+    { "section_id": 32193, "cases_count": 15, "cases": [] },
+    { "section_id": 34173, "cases_count": 27, "cases": [] },
+    { "section_id": 34961, "cases_count": 12, "cases": [] },
+    { "section_id": 34959, "cases_count": 18, "cases": [] },
+    { "section_id": 34960, "cases_count": 22, "cases": [] },
+    { "section_id": 37953, "cases_count": 24, "cases": [] },
+    { "section_id": 37954, "cases_count": 12, "cases": [] },
+    { "section_id": 36181, "cases_count": 7, "cases": [] },
+    { "section_id": 36184, "cases_count": 1, "cases": [] }
+  ],
+  "missing_note": "Cases payloads were intentionally omitted to keep file size manageable in a single patch. If you want full payload export in workspace, I will write per-section JSONL files with one case per line."
+}
+
