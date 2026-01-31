@@ -12,8 +12,8 @@
 
 | ID | Значение (как в TestRail) |
 |---:|---|
-| 9 | Regression |
 | 7 | (уточнить) |
+| 9 | Regression |
 
 ---
 
@@ -31,6 +31,7 @@
 
 | ID | Статус (как в TestRail) |
 |---:|---|
+| 1 | Ready |
 | 2 | (уточнить) |
 | 3 | Review |
 
@@ -40,9 +41,10 @@
 
 | ID | Пользователь (как в TestRail) |
 |---:|---|
-| 59 | (уточнить) |
-| 61 | (уточнить) |
+| null | None (не назначено / поле пустое) |
 | 54 | Aleksandra Minikh |
+| 59 | (уточнить) |
+| 61 | Me |
 
 ---
 
@@ -51,9 +53,10 @@
 | ID | Значение (как в TestRail) |
 |---:|---|
 | 0 | (уточнить) |
-| 1 | (уточнить) |
+| 1 | Not_automated |
 | 2 | Automated |
 | 5 | (уточнить) |
+| 6 | Ready_to_automate |
 
 ---
 
@@ -61,7 +64,7 @@
 
 | ID | Значение (как в TestRail) |
 |---:|---|
-| 0 | (уточнить) |
+| 0 | None |
 | 5 | TypeScript |
 
 ---
@@ -70,8 +73,8 @@
 
 | ID | Label (как в TestRail) |
 |---:|---|
-| 145 | (уточнить) |
 | 53 | (уточнить) |
+| 145 | (уточнить) |
 
 ---
 
@@ -79,10 +82,28 @@
 
 | ID | Label title |
 |---:|---|
+| 57 | 3D_view |
+| 78 | bit_position |
+| 76 | context_menu |
 | 79 | directional_widget |
+| 89 | drillspot_settings |
+| 90 | linear_widget |
+| 94 | metrics_widget |
+| 73 | mudreports |
+| 92 | numeral_widget |
+| 97 | popout_window |
+| 59 | ribbon |
 | 88 | routing |
-| 56 | windows |
+| 96 | slide_sheet |
+| 81 | spreadsheet |
+| 58 | spreadsheet_mud-repo |
+| 80 | spreadsheet_ribbon |
 | 87 | tabs |
+| 95 | table_widget |
+| 91 | toolface_widget |
+| 77 | trace_list |
+| 56 | windows |
+| 93 | x-plot_widget |
 
 ---
 
@@ -92,8 +113,10 @@
 |---:|---|
 | 62 | (уточнить) |
 | 63 | (уточнить) |
+| 68 | M 2025.28.0 |
 | 69 | M 2025.29.0 |
 | 73 | M 2026.1.0 |
+| 74 | M 2026.2.0 |
 
 ---
 

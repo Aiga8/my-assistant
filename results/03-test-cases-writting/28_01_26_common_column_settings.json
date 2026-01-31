@@ -1,0 +1,168 @@
+[
+  {
+    "section_id": 36577,
+    "title": "Reorder columns in Mud Reports",
+    "custom_preconds": "Пользователь **авторизован**.\nОткрыт спредшит *S19. Mud Reports*.\nВ таблице видны как минимум два столбца.\nОткрыты DevTools -> *Network* (для фиксации запроса сохранения).",
+    "type_id": 9,
+    "priority_id": 2,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81, 89, 73],
+    "custom_fix_versions": [69],
+    "refs": "DS-11489",
+    "custom_steps_separated": [
+      {
+        "content": "В настройках столбцов изменить порядок (переместить один столбец перед другим).",
+        "expected": "Столбцы отображаются в новом порядке.\nВ *Network* отправлен HTTP-запрос сохранения с новым порядком столбцов."
+      }
+    ]
+  },
+  {
+    "section_id": 36577,
+    "title": "Hide column action is unavailable in Mud Reports",
+    "custom_preconds": "Пользователь **авторизован**.\nОткрыт спредшит *S19. Mud Reports*.\nМеню настройки столбцов доступно.",
+    "type_id": 9,
+    "priority_id": 2,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81, 89, 73],
+    "custom_fix_versions": [69],
+    "refs": "DS-11489",
+    "custom_steps_separated": [
+      {
+        "content": "Открыть настройки столбцов и попытаться скрыть любой столбец.",
+        "expected": "Действие скрытия недоступно (отсутствует или не применяется)."
+      }
+    ]
+  },
+  {
+    "section_id": 36577,
+    "title": "Resize column width in Mud Reports",
+    "custom_preconds": "Пользователь **авторизован**.\nОткрыт спредшит *S19. Mud Reports*.\nСтолбец *MD* видим в таблице.\nОткрыты DevTools -> *Network* (для фиксации запроса сохранения).",
+    "type_id": 9,
+    "priority_id": 2,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81, 89, 73],
+    "custom_fix_versions": [69],
+    "refs": "DS-11489",
+    "custom_steps_separated": [
+      {
+        "content": "Изменить ширину столбца *MD* (перетащить границу заголовка), увеличив ее.",
+        "expected": "Ширина столбца *MD* изменилась и визуально соответствует новой ширине.\nВ *Network* отправлен HTTP-запрос сохранения с обновленной шириной столбца."
+      }
+    ]
+  },
+  {
+    "section_id": 36577,
+    "title": "Persist column settings after reopen in Mud Reports",
+    "custom_preconds": "Пользователь **авторизован**.\nДля типа *S19. Mud Reports* уже применены кастомные настройки: изменен порядок и ширина.\nСпредшит *S19. Mud Reports* открыт.",
+    "type_id": 9,
+    "priority_id": 2,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81, 89, 73],
+    "custom_fix_versions": [69],
+    "refs": "DS-11489",
+    "custom_steps_separated": [
+      {
+        "content": "Закрыть спредшит и открыть его снова (либо обновить страницу).",
+        "expected": "Спредшит открывается с ранее сохраненными настройками: порядок и ширина соответствуют последним изменениям."
+      }
+    ]
+  },
+  {
+    "section_id": 36577,
+    "title": "Apply saved settings to Mud Reports in another well",
+    "custom_preconds": "Пользователь **авторизован**.\nДля типа *S19. Mud Reports* уже применены кастомные настройки (порядок/ширина).\nЕсть доступ к другой скважине с доступным *S19. Mud Reports*.",
+    "type_id": 9,
+    "priority_id": 2,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81, 89, 73],
+    "custom_fix_versions": [69],
+    "refs": "DS-11489",
+    "custom_steps_separated": [
+      {
+        "content": "Открыть спредшит *S19. Mud Reports* для другой скважины.",
+        "expected": "Спредшит открывается с последними сохраненными настройками данного типа (порядок, ширина)."
+      }
+    ]
+  },
+  {
+    "section_id": 36577,
+    "title": "Column settings are user-specific",
+    "custom_preconds": "Пользователь **A** применил кастомные настройки для *S19. Mud Reports*.\nЕсть второй пользователь **B** с доступом к тем же данным.",
+    "type_id": 9,
+    "priority_id": 2,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81, 89, 73],
+    "custom_fix_versions": [69],
+    "refs": "DS-11489",
+    "custom_steps_separated": [
+      {
+        "content": "Войти под пользователем **B** и открыть *S19. Mud Reports*.",
+        "expected": "Отображаются настройки по умолчанию (или сохраненные настройки пользователя **B**); изменения пользователя **A** не применяются."
+      }
+    ]
+  },
+  {
+    "section_id": 36577,
+    "title": "Reset column settings is unavailable in Mud Reports",
+    "custom_preconds": "Пользователь **авторизован**.\nДля типа *S19. Mud Reports* применены кастомные настройки (порядок/ширина).\nСпредшит *S19. Mud Reports* открыт.",
+    "type_id": 9,
+    "priority_id": 3,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81, 89, 73],
+    "custom_fix_versions": [69],
+    "refs": "DS-11489",
+    "custom_steps_separated": [
+      {
+        "content": "Открыть настройки столбцов и проверить наличие действия *Сбросить к по умолчанию*.",
+        "expected": "Действие сброса отсутствует или недоступно."
+      }
+    ]
+  },
+  {
+    "section_id": 36577,
+    "title": "Column settings are fully disabled for MudLog",
+    "custom_preconds": "Пользователь **авторизован**.\nОткрыт спредшит *S16. MudLog*.",
+    "type_id": 9,
+    "priority_id": 3,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81],
+    "custom_fix_versions": [69],
+    "refs": "DS-11489",
+    "custom_steps_separated": [
+      {
+        "content": "Попытаться открыть или использовать меню настройки столбцов.",
+        "expected": "Меню отсутствует или неактивно; изменить порядок, видимость или ширину столбцов невозможно."
+      }
+    ]
+  },
+  {
+    "section_id": 36577,
+    "title": "Hide column is disabled but reordering allowed in Performance KPI",
+    "custom_preconds": "Пользователь **авторизован**.\nОткрыт спредшит *S8. Performance KPI*.\nМеню настройки столбцов доступно.",
+    "type_id": 9,
+    "priority_id": 3,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81],
+    "custom_fix_versions": [69],
+    "refs": "DS-11489",
+    "custom_steps_separated": [
+      {
+        "content": "В настройках столбцов попытаться скрыть любой столбец.",
+        "expected": "Опция скрытия недоступна или не применяется."
+      },
+      {
+        "content": "Изменить порядок столбцов.",
+        "expected": "Порядок столбцов изменяется и отображается в таблице."
+      }
+    ]
+  }
+]
