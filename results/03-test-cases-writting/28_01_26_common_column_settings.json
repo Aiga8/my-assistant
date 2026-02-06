@@ -1,134 +1,134 @@
 [
   {
     "section_id": 36577,
-    "title": "Reorder columns in Mud Reports",
-    "custom_preconds": "Пользователь **авторизован**.\nОткрыт спредшит *S19. Mud Reports*.\nВ таблице видны как минимум два столбца.\nОткрыты DevTools -> *Network* (для фиксации запроса сохранения).",
+    "title": "Reorder columns in spreadsheet",
+    "custom_preconds": "Открыт спредшит, где доступна настройка столбцов\nВ таблице видны как минимум два столбца",
     "type_id": 9,
     "priority_id": 2,
     "custom_automation": 1,
     "custom_automation_type": 0,
-    "labels": [81, 89, 73],
+    "labels": [81, 89],
     "custom_fix_versions": [69],
     "refs": "DS-11489",
     "custom_steps_separated": [
       {
-        "content": "В настройках столбцов изменить порядок (переместить один столбец перед другим).",
-        "expected": "Столбцы отображаются в новом порядке.\nВ *Network* отправлен HTTP-запрос сохранения с новым порядком столбцов."
+        "content": "Изменить порядок столбцов одним из способов: через Ribbon → *Columns* или перетаскиванием индикатора на хедере",
+        "expected": "Столбцы отображаются в новом порядке\nВ *Network* отправлен запрос:\n- drillspot-settings\n-\nВ payload обновлен `spreadsheets.<SpreadsheetType>.columnsOrder`"
       }
     ]
   },
   {
     "section_id": 36577,
-    "title": "Hide column action is unavailable in Mud Reports",
-    "custom_preconds": "Пользователь **авторизован**.\nОткрыт спредшит *S19. Mud Reports*.\nМеню настройки столбцов доступно.",
+    "title": "Persist column settings after reopen",
+    "custom_preconds": "Для выбранного типа спредшита на бэке уже сохранены кастомные настройки столбцов:\n- изменен порядок столбцов\nили\n- изменена ширина одного/нескольких столбцов\nили\n- изменена видимость одного/нескольких столбцов",
     "type_id": 9,
     "priority_id": 2,
     "custom_automation": 1,
     "custom_automation_type": 0,
-    "labels": [81, 89, 73],
+    "labels": [81, 89],
     "custom_fix_versions": [69],
     "refs": "DS-11489",
     "custom_steps_separated": [
       {
-        "content": "Открыть настройки столбцов и попытаться скрыть любой столбец.",
-        "expected": "Действие скрытия недоступно (отсутствует или не применяется)."
+        "content": "Открыть спредшит выбранного типа",
+        "expected": "Порядок, ширина и видимость столбцов соответствуют сохраненным ранее кастомным настройкам"
       }
     ]
   },
   {
     "section_id": 36577,
-    "title": "Resize column width in Mud Reports",
-    "custom_preconds": "Пользователь **авторизован**.\nОткрыт спредшит *S19. Mud Reports*.\nСтолбец *MD* видим в таблице.\nОткрыты DevTools -> *Network* (для фиксации запроса сохранения).",
+    "title": "Apply saved settings to another spreadsheet of same type",
+    "custom_preconds": "Для выбранного типа спредшита уже применены кастомные настройки (порядок/ширина)\nЕсть доступ к другому объекту с тем же типом спредшита",
     "type_id": 9,
     "priority_id": 2,
     "custom_automation": 1,
     "custom_automation_type": 0,
-    "labels": [81, 89, 73],
+    "labels": [81, 89],
     "custom_fix_versions": [69],
     "refs": "DS-11489",
     "custom_steps_separated": [
       {
-        "content": "Изменить ширину столбца *MD* (перетащить границу заголовка), увеличив ее.",
-        "expected": "Ширина столбца *MD* изменилась и визуально соответствует новой ширине.\nВ *Network* отправлен HTTP-запрос сохранения с обновленной шириной столбца."
-      }
-    ]
-  },
-  {
-    "section_id": 36577,
-    "title": "Persist column settings after reopen in Mud Reports",
-    "custom_preconds": "Пользователь **авторизован**.\nДля типа *S19. Mud Reports* уже применены кастомные настройки: изменен порядок и ширина.\nСпредшит *S19. Mud Reports* открыт.",
-    "type_id": 9,
-    "priority_id": 2,
-    "custom_automation": 1,
-    "custom_automation_type": 0,
-    "labels": [81, 89, 73],
-    "custom_fix_versions": [69],
-    "refs": "DS-11489",
-    "custom_steps_separated": [
-      {
-        "content": "Закрыть спредшит и открыть его снова (либо обновить страницу).",
-        "expected": "Спредшит открывается с ранее сохраненными настройками: порядок и ширина соответствуют последним изменениям."
-      }
-    ]
-  },
-  {
-    "section_id": 36577,
-    "title": "Apply saved settings to Mud Reports in another well",
-    "custom_preconds": "Пользователь **авторизован**.\nДля типа *S19. Mud Reports* уже применены кастомные настройки (порядок/ширина).\nЕсть доступ к другой скважине с доступным *S19. Mud Reports*.",
-    "type_id": 9,
-    "priority_id": 2,
-    "custom_automation": 1,
-    "custom_automation_type": 0,
-    "labels": [81, 89, 73],
-    "custom_fix_versions": [69],
-    "refs": "DS-11489",
-    "custom_steps_separated": [
-      {
-        "content": "Открыть спредшит *S19. Mud Reports* для другой скважины.",
-        "expected": "Спредшит открывается с последними сохраненными настройками данного типа (порядок, ширина)."
+        "content": "Открыть спредшит того же типа для другого объекта",
+        "expected": "Спредшит открывается с последними сохраненными настройками данного типа (порядок, ширина), сохраненными на бэке"
       }
     ]
   },
   {
     "section_id": 36577,
     "title": "Column settings are user-specific",
-    "custom_preconds": "Пользователь **A** применил кастомные настройки для *S19. Mud Reports*.\nЕсть второй пользователь **B** с доступом к тем же данным.",
+    "custom_preconds": "<p>Пользователь <strong>A</strong> применил кастомные настройки для выбранного типа спредшита<br />Есть пользователь <strong>B</strong> с доступом к тем же данным</p>\r\n",
     "type_id": 9,
     "priority_id": 2,
     "custom_automation": 1,
     "custom_automation_type": 0,
-    "labels": [81, 89, 73],
+    "labels": [81, 89],
     "custom_fix_versions": [69],
     "refs": "DS-11489",
     "custom_steps_separated": [
       {
-        "content": "Войти под пользователем **B** и открыть *S19. Mud Reports*.",
-        "expected": "Отображаются настройки по умолчанию (или сохраненные настройки пользователя **B**); изменения пользователя **A** не применяются."
+        "content": "<p>Войти под пользователем <strong>B</strong> и открыть спредшит этого типа</p>",
+        "expected": "<p>Отображаются настройки по умолчанию (или сохраненные настройки пользователя <strong>B</strong> на бэке)<br>Изменения пользователя <strong>A</strong> не применяются</p>"
       }
     ]
   },
   {
     "section_id": 36577,
-    "title": "Reset column settings is unavailable in Mud Reports",
-    "custom_preconds": "Пользователь **авторизован**.\nДля типа *S19. Mud Reports* применены кастомные настройки (порядок/ширина).\nСпредшит *S19. Mud Reports* открыт.",
+    "title": "Resize column width in spreadsheet",
+    "custom_preconds": "Открыт спредшит, где доступна настройка столбцов\nВыбран любой видимый столбец",
     "type_id": 9,
-    "priority_id": 3,
+    "priority_id": 2,
     "custom_automation": 1,
     "custom_automation_type": 0,
-    "labels": [81, 89, 73],
+    "labels": [81, 89],
     "custom_fix_versions": [69],
     "refs": "DS-11489",
     "custom_steps_separated": [
       {
-        "content": "Открыть настройки столбцов и проверить наличие действия *Сбросить к по умолчанию*.",
-        "expected": "Действие сброса отсутствует или недоступно."
+        "content": "Изменить ширину выбранного столбца (перетащить границу заголовка), увеличив ее",
+        "expected": "Ширина столбца изменилась и визуально соответствует новой ширине\nВ *Network* отправлен запрос:\n- drillspot-settings\n-\nВ payload обновлен `spreadsheets.<SpreadsheetType>.columnsSettings.<columnId>.width`\nИзменение сохраняется на бэке"
       }
     ]
   },
   {
     "section_id": 36577,
-    "title": "Column settings are fully disabled for MudLog",
-    "custom_preconds": "Пользователь **авторизован**.\nОткрыт спредшит *S16. MudLog*.",
+    "title": "Hide column in spreadsheet",
+    "custom_preconds": "Открыт спредшит, где доступна настройка столбцов\nВыбран любой видимый столбец",
+    "type_id": 9,
+    "priority_id": 2,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81, 89],
+    "custom_fix_versions": [69],
+    "refs": "DS-11489",
+    "custom_steps_separated": [
+      {
+        "content": "Скрыть столбец одним из способов: через Ribbon → *Columns* или через меню Columns (список столбцов)",
+        "expected": "Столбец скрыт и не отображается в таблице\nВ *Network* отправлен запрос:\n- drillspot-settings\n-\nВ payload обновлен `spreadsheets.<SpreadsheetType>.columnsSettings.<columnId>.hidden`\nИзменение сохраняется на бэке"
+      }
+    ]
+  },
+  {
+    "section_id": 36577,
+    "title": "Hide column action is unavailable when restricted",
+    "custom_preconds": "Открыт спредшит, где скрытие столбцов отключено",
+    "type_id": 9,
+    "priority_id": 2,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81, 89],
+    "custom_fix_versions": [69],
+    "refs": "DS-11489",
+    "custom_steps_separated": [
+      {
+        "content": "Открыть настройки столбцов и попытаться скрыть любой столбец",
+        "expected": "Действие скрытия недоступно (отсутствует или не применяется)\nЗапрос в *Network* не отправляется, сохранение на бэке не выполняется"
+      }
+    ]
+  },
+  {
+    "section_id": 36577,
+    "title": "Reorder columns is unavailable when restricted",
+    "custom_preconds": "Открыт спредшит, где настройка столбцов полностью запрещена",
     "type_id": 9,
     "priority_id": 3,
     "custom_automation": 1,
@@ -138,15 +138,15 @@
     "refs": "DS-11489",
     "custom_steps_separated": [
       {
-        "content": "Попытаться открыть или использовать меню настройки столбцов.",
-        "expected": "Меню отсутствует или неактивно; изменить порядок, видимость или ширину столбцов невозможно."
+        "content": "Попытаться изменить порядок столбцов",
+        "expected": "Порядок столбцов не изменяется\nЗапрос в *Network* не отправляется, сохранение на бэке не выполняется"
       }
     ]
   },
   {
     "section_id": 36577,
-    "title": "Hide column is disabled but reordering allowed in Performance KPI",
-    "custom_preconds": "Пользователь **авторизован**.\nОткрыт спредшит *S8. Performance KPI*.\nМеню настройки столбцов доступно.",
+    "title": "Resize column width is unavailable when restricted",
+    "custom_preconds": "Открыт спредшит, где настройка столбцов полностью запрещена",
     "type_id": 9,
     "priority_id": 3,
     "custom_automation": 1,
@@ -156,12 +156,84 @@
     "refs": "DS-11489",
     "custom_steps_separated": [
       {
-        "content": "В настройках столбцов попытаться скрыть любой столбец.",
-        "expected": "Опция скрытия недоступна или не применяется."
+        "content": "Попытаться изменить ширину столбца",
+        "expected": "Ширина столбца не изменяется\nЗапрос в *Network* не отправляется, сохранение на бэке не выполняется"
+      }
+    ]
+  },
+  {
+    "section_id": 36577,
+    "title": "Reset column settings action availability",
+    "custom_preconds": "Для выбранного типа спредшита применены кастомные настройки\nОткрыт спредшит этого типа\nКнопка *Reset Columns* доступна в Ribbon",
+    "type_id": 9,
+    "priority_id": 3,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81, 89],
+    "custom_fix_versions": [69],
+    "refs": "DS-11489",
+    "custom_steps_separated": [
+      {
+        "content": "Нажать *Reset Columns*",
+        "expected": "Порядок, ширина и видимость столбцов возвращаются к значениям по умолчанию\nВ *Network* отправлен запрос:\n- drillspot-settings\n-\nВ payload `spreadsheets.<SpreadsheetType>` очищен до пустого объекта\nИзменение сохраняется на бэке"
+      }
+    ]
+  },
+  {
+    "section_id": 36577,
+    "title": "Saved column settings are applied only within same spreadsheet type",
+    "custom_preconds": "Для типа *SpreadsheetTypeA* на бэке уже сохранены кастомные настройки (порядок/ширина/видимость)\nДля типа *SpreadsheetTypeB* сохранены настройки по умолчанию (или другие, отличающиеся от *SpreadsheetTypeA*)",
+    "type_id": 9,
+    "priority_id": 2,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81, 89],
+    "custom_fix_versions": [69],
+    "refs": "DS-11489",
+    "custom_steps_separated": [
+      {
+        "content": "Открыть спредшит типа *SpreadsheetTypeB* и проверить настройки столбцов",
+        "expected": "Применяются настройки, сохраненные для типа *SpreadsheetTypeB*\nНастройки, сохраненные для типа *SpreadsheetTypeA*, не применяются"
+      }
+    ]
+  },
+  {
+    "section_id": 36577,
+    "title": "Save order, width and visibility changes in one session",
+    "custom_preconds": "Открыт спредшит, где доступна настройка столбцов (порядок/ширина/видимость)",
+    "type_id": 9,
+    "priority_id": 2,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81, 89],
+    "custom_fix_versions": [69],
+    "refs": "DS-11489",
+    "custom_steps_separated": [
+      {
+        "content": "Послеловательно поменять настройки столбцов:\n- поменять порядок двух столбцов\n- изменить ширину одного столбца\n- скрыть один столбец (если скрытие доступно для данного типа спредшита)",
+        "expected": "Изменения применены в таблице\nВ *Network* отправлены 3 запроса:\n- drillspot-settings (порядок)\n- drillspot-settings (ширина)\n- drillspot-settings (видимость)\n\nВ payload(ах) обновлены соответствующие поля:\n- `spreadsheets.<SpreadsheetType>.columnsOrder`\n- `spreadsheets.<SpreadsheetType>.columnsSettings.<columnId>.width`\n- `spreadsheets.<SpreadsheetType>.columnsSettings.<columnId>.hidden`\nИзменения сохраняются на бэке"
+      }
+    ]
+  },
+  {
+    "section_id": 36577,
+    "title": "Last column width change is persisted (last-write-wins)",
+    "custom_preconds": "Открыт спредшит, где доступна настройка столбцов\nВыбран любой видимый столбец",
+    "type_id": 9,
+    "priority_id": 2,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81, 89],
+    "custom_fix_versions": [69],
+    "refs": "DS-11489",
+    "custom_steps_separated": [
+      {
+        "content": "Последовательно изменить ширину выбранного столбца 2 раза (например, сначала увеличить, затем уменьшить)",
+        "expected": "Ширина столбца визуально соответствует последнему изменению\nВ *Network* отправлены запросы:\n- drillspot-settings\n-\nВ последнем payload обновлен `spreadsheets.<SpreadsheetType>.columnsSettings.<columnId>.width` и значение соответствует последнему изменению\nИзменение сохраняется на бэке"
       },
       {
-        "content": "Изменить порядок столбцов.",
-        "expected": "Порядок столбцов изменяется и отображается в таблице."
+        "content": "Открыть любой спредшит того же типа",
+        "expected": "Ширина выбранного столбца соответствует последнему изменению из шага 1"
       }
     ]
   }
