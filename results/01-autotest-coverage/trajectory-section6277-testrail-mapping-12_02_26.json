@@ -1,0 +1,1536 @@
+[
+  {
+    "id": 1,
+    "sourceId": 1,
+    "title": "Отображение атрибутов скважины в боковой панели",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-attributes.spec.ts",
+      "testName": "TA-001: Sidebar renders with correct values for wellbore"
+    },
+    "testrail": [
+      {
+        "caseId": "287279",
+        "title": "Verify X(G/N) and Y(G/N) calculation dependency on Xsrf and Ysrf",
+        "score": "High",
+        "reason": "Shared keywords: trajectory, well, xsrf, ysrf, поле, поля"
+      },
+      {
+        "caseId": "314581",
+        "title": "Send only changed attributes - Xsrf with calculated magnetic model",
+        "score": "High",
+        "reason": "Shared keywords: api, attributes, gn, trajectory, values, well, xsrf, поле, полей, содержат"
+      },
+      {
+        "caseId": "314579",
+        "title": "Send only changed attributes - Xsrf with User Defined magnetic model",
+        "score": "High",
+        "reason": "Shared keywords: attributes, gn, trajectory, values, well, xsrf, поле, траектории"
+      }
+    ],
+    "status": "Covered",
+    "statusNote": "Single strong match (>=60%)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 2,
+    "sourceId": 2,
+    "title": "Отображение атрибутов typewell в боковой панели",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-attributes.spec.ts",
+      "testName": "TA-001b: Sidebar renders with correct values for typewell"
+    },
+    "testrail": [
+      {
+        "caseId": "285686",
+        "title": "Surface Location Xsrf field - valid input",
+        "score": "High",
+        "reason": "Shared keywords: displayed, rendered, shown, trajectory, typewell, xsrf, отображается, поле, поля, траектории"
+      },
+      {
+        "caseId": "285687",
+        "title": "Surface Location Xsrf field - range validation",
+        "score": "Medium",
+        "reason": "Shared keywords: displayed, rendered, shown, trajectory, typewell, xsrf, отображается, поле"
+      },
+      {
+        "caseId": "285688",
+        "title": "Surface Location Ysrf field - valid input",
+        "score": "Medium",
+        "reason": "Shared keywords: displayed, rendered, shown, trajectory, typewell, ysrf, отображается, поле, поля, траектории"
+      }
+    ],
+    "status": "Covered",
+    "statusNote": "Single strong match (>=60%)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 3,
+    "sourceId": 3,
+    "title": "Отображение атрибутов well plan в боковой панели",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-attributes.spec.ts",
+      "testName": "TA-001c: Sidebar renders with correct values for well plan"
+    },
+    "testrail": [
+      {
+        "caseId": "153763",
+        "title": "Valid values Xsrf  in Surface Location in side bar in Well Trajectory of well plan",
+        "score": "High",
+        "reason": "Shared keywords: open, plan, trajectory, values, well, xsrf, открыть, поле"
+      },
+      {
+        "caseId": "269715",
+        "title": "Valid characters Xsrf  in Surface Location in side bar in Well Trajectory of well plan",
+        "score": "High",
+        "reason": "Shared keywords: open, plan, trajectory, well, xsrf, открыть, поле"
+      },
+      {
+        "caseId": "269716",
+        "title": "Valid values Ysrf  in Surface Location in side bar in Well Trajectory of well plan",
+        "score": "High",
+        "reason": "Shared keywords: open, plan, trajectory, values, well, ysrf, открыть, поле"
+      }
+    ],
+    "status": "Covered",
+    "statusNote": "Single strong match (>=60%)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 4,
+    "sourceId": 4,
+    "title": "Изменение Azimuth VS GN и проверка перерасчёта VS",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-attributes.spec.ts",
+      "testName": "TA-002: Edit Azim VS GN - verify VS recalculation correctness"
+    },
+    "testrail": [
+      {
+        "caseId": "314573",
+        "title": "Send only changed attributes - Azimuth VS field with trajectory recalculation",
+        "score": "Low",
+        "reason": "Shared keywords: attributes, azimuth, gn, recalculation, trajectory, vs, значение, изменить, таблице"
+      },
+      {
+        "caseId": "314547",
+        "title": "Verify trajectory recalculation on wellheader changes",
+        "score": "Low",
+        "reason": "Shared keywords: 45, 90, azim, azimuth, gn, recalculation, trajectory, verify, vs, значения"
+      },
+      {
+        "caseId": "314572",
+        "title": "Send only changed attributes - Grid Convergence field with trajectory recalculation",
+        "score": "Low",
+        "reason": "Shared keywords: attributes, azim, gn, recalculation, trajectory, vs, значение, изменить, таблице"
+      }
+    ],
+    "status": "Partial",
+    "statusNote": "Functional core matched (5/9 core tokens)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 5,
+    "sourceId": 5,
+    "title": "Изменение XSRF и проверка перерасчёта траектории (Wellbore и FOOT-проект)",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-attributes.spec.ts",
+      "testName": "TA-003: Edit XSRF and verify trajectory recalculation"
+    },
+    "testrail": [
+      {
+        "caseId": "170730",
+        "title": "Values of Xsrf ​​are sent to the back in unconverted units (ft project)",
+        "score": "High",
+        "reason": "Shared keywords: foot, ft, project, trajectory, units, xsrf, ввести, значение, проект, футах"
+      },
+      {
+        "caseId": "170732",
+        "title": "Values of Xsrf ​​are sent to the back in unconverted units (ft-m project)",
+        "score": "High",
+        "reason": "Shared keywords: ft, project, trajectory, units, xsrf, ввести, значение, проект"
+      },
+      {
+        "caseId": "314579",
+        "title": "Send only changed attributes - Xsrf with User Defined magnetic model",
+        "score": "High",
+        "reason": "Shared keywords: 100, attributes, foot, project, trajectory, xsrf, проект, траектории"
+      }
+    ],
+    "status": "Covered",
+    "statusNote": "Single strong match (>=60%)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 6,
+    "sourceId": 6,
+    "title": "Изменение XSRF и проверка перерасчёта для typewell",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-attributes.spec.ts",
+      "testName": "TA-003b: Edit XSRF and verify trajectory recalculation for typewell"
+    },
+    "testrail": [
+      {
+        "caseId": "285686",
+        "title": "Surface Location Xsrf field - valid input",
+        "score": "High",
+        "reason": "Shared keywords: trajectory, typewell, xsrf, ввести, значение, поле"
+      },
+      {
+        "caseId": "285687",
+        "title": "Surface Location Xsrf field - range validation",
+        "score": "High",
+        "reason": "Shared keywords: trajectory, typewell, xsrf, ввести, значение, поле"
+      },
+      {
+        "caseId": "285685",
+        "title": "Project coordinate system validation errors do not affect the disabling of inputs in the sidebar for Typewell",
+        "score": "Medium",
+        "reason": "Shared keywords: coordinate, panel, sidebar, trajectory, typewell, xsrf, значение, поле"
+      }
+    ],
+    "status": "Covered",
+    "statusNote": "Single strong match (>=60%)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 7,
+    "sourceId": 7,
+    "title": "Изменение XSRF и проверка перерасчёта для well plan",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-attributes.spec.ts",
+      "testName": "TA-003c: Edit XSRF and verify trajectory recalculation for well plan"
+    },
+    "testrail": [
+      {
+        "caseId": "153763",
+        "title": "Valid values Xsrf  in Surface Location in side bar in Well Trajectory of well plan",
+        "score": "High",
+        "reason": "Shared keywords: plan, trajectory, well, xsrf, ввести, значение, поле"
+      },
+      {
+        "caseId": "269715",
+        "title": "Valid characters Xsrf  in Surface Location in side bar in Well Trajectory of well plan",
+        "score": "High",
+        "reason": "Shared keywords: plan, trajectory, well, xsrf, ввести, поле"
+      },
+      {
+        "caseId": "154653",
+        "title": "Changing value of Vertical in Location Uncertainly in side bar in Well Trajectory of well plan",
+        "score": "High",
+        "reason": "Shared keywords: changing, plan, trajectory, well, значение, поле"
+      }
+    ],
+    "status": "Covered",
+    "statusNote": "Single strong match (>=60%)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 8,
+    "sourceId": 8,
+    "title": "Изменение YSRF и проверка перерасчёта траектории",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-attributes.spec.ts",
+      "testName": "TA-004: Edit YSRF and verify trajectory recalculation"
+    },
+    "testrail": [
+      {
+        "caseId": "170733",
+        "title": "Values of Ysrf ​​are sent to the back in unconverted units (ft project)",
+        "score": "High",
+        "reason": "Shared keywords: foot, ft, project, trajectory, ysrf, ввести, значение, поле"
+      },
+      {
+        "caseId": "170735",
+        "title": "Values of Ysrf ​​are sent to the back in unconverted units (ft-m project)",
+        "score": "High",
+        "reason": "Shared keywords: ft, project, trajectory, ysrf, ввести, значение, поле"
+      },
+      {
+        "caseId": "314582",
+        "title": "Send only changed attributes - Ysrf with calculated magnetic model",
+        "score": "High",
+        "reason": "Shared keywords: attributes, coordinate, project, trajectory, ysrf, поле, траектории"
+      }
+    ],
+    "status": "Covered",
+    "statusNote": "Single strong match (>=60%)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 9,
+    "sourceId": 9,
+    "title": "Изменение KB Elevation и проверка перерасчёта TVDSS",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-attributes.spec.ts",
+      "testName": "TA-005: Edit KB Elevation and verify TVDSS recalculation"
+    },
+    "testrail": [
+      {
+        "caseId": "314574",
+        "title": "Send only changed attributes - KB Elevation field with trajectory recalculation",
+        "score": "Low",
+        "reason": "Shared keywords: attributes, elevation, kb, recalculation, trajectory, tvdss, значение, изменить, пересчитывается, таблице"
+      },
+      {
+        "caseId": "314552",
+        "title": "Trajectory table recalculation on wellheader changes from StarSteer",
+        "score": "Low",
+        "reason": "Shared keywords: elevation, kb, recalculation, trajectory, tvdss, изменении, изменения, изменить, пересчитывается, проверить"
+      },
+      {
+        "caseId": "314547",
+        "title": "Verify trajectory recalculation on wellheader changes",
+        "score": "Low",
+        "reason": "Shared keywords: elevation, kb, recalculation, trajectory, tvdss, verify, изменении, изменить, проверить, таблице"
+      }
+    ],
+    "status": "Partial",
+    "statusNote": "Functional core matched (5/12 core tokens)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 10,
+    "sourceId": 10,
+    "title": "Изменение Grid Convergence — значение сохраняется",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-attributes.spec.ts",
+      "testName": "TA-006: Edit Grid Convergence - verify value saved"
+    },
+    "testrail": [
+      {
+        "caseId": "314572",
+        "title": "Send only changed attributes - Grid Convergence field with trajectory recalculation",
+        "score": "Low",
+        "reason": "Shared keywords: attributes, convergence, displayed, grid, rendered, shown, trajectory, значение, изменить, отображается"
+      },
+      {
+        "caseId": "285685",
+        "title": "Project coordinate system validation errors do not affect the disabling of inputs in the sidebar for Typewell",
+        "score": "Low",
+        "reason": "Shared keywords: convergence, displayed, grid, panel, rendered, shown, sidebar, trajectory, значение, отображается"
+      },
+      {
+        "caseId": "183607",
+        "title": "Project coordinate system validation errors do not affect the disabling of inputs in the sidebar",
+        "score": "Low",
+        "reason": "Shared keywords: convergence, displayed, grid, panel, rendered, shown, sidebar, trajectory, значение, отображается"
+      }
+    ],
+    "status": "Partial",
+    "statusNote": "Functional core matched (4/9 core tokens)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 11,
+    "sourceId": 11,
+    "title": "Изменение Vertical Uncertainty",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-attributes.spec.ts",
+      "testName": "TA-007: Edit Location Uncertainty (Vertical)"
+    },
+    "testrail": [
+      {
+        "caseId": "285685",
+        "title": "Project coordinate system validation errors do not affect the disabling of inputs in the sidebar for Typewell",
+        "score": "Low",
+        "reason": "Shared keywords: displayed, location, panel, rendered, shown, sidebar, trajectory, uncertainty, vertical, значение"
+      },
+      {
+        "caseId": "314572",
+        "title": "Send only changed attributes - Grid Convergence field with trajectory recalculation",
+        "score": "Low",
+        "reason": "Shared keywords: 10, attributes, displayed, rendered, shown, trajectory, значение, изменить, отображается, поле"
+      },
+      {
+        "caseId": "314573",
+        "title": "Send only changed attributes - Azimuth VS field with trajectory recalculation",
+        "score": "Low",
+        "reason": "Shared keywords: 10, attributes, trajectory, значение, изменить, поле"
+      }
+    ],
+    "status": "Partial",
+    "statusNote": "Functional core matched (4/7 core tokens)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 12,
+    "sourceId": 12,
+    "title": "Изменение Horizontal Uncertainty",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-attributes.spec.ts",
+      "testName": "TA-008: Edit Location Uncertainty (Horizontal)"
+    },
+    "testrail": [
+      {
+        "caseId": "285685",
+        "title": "Project coordinate system validation errors do not affect the disabling of inputs in the sidebar for Typewell",
+        "score": "Low",
+        "reason": "Shared keywords: displayed, horizontal, location, panel, rendered, shown, sidebar, trajectory, uncertainty, значение"
+      },
+      {
+        "caseId": "183607",
+        "title": "Project coordinate system validation errors do not affect the disabling of inputs in the sidebar",
+        "score": "Low",
+        "reason": "Shared keywords: displayed, horizontal, location, panel, rendered, shown, sidebar, trajectory, значение, отображается"
+      },
+      {
+        "caseId": "314578",
+        "title": "Send only changed attributes - Location Uncertainty fields",
+        "score": "Low",
+        "reason": "Shared keywords: attributes, horizontal, location, uncertainty, значение, изменить, поле"
+      }
+    ],
+    "status": "Partial",
+    "statusNote": "Functional core matched (5/7 core tokens)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 13,
+    "sourceId": 13,
+    "title": "Изменение даты (Magnetic Model) — поле модели и даты обновляются",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-attributes.spec.ts",
+      "testName": "TA-009: Edit Magnetic Model - triggers magnetic params fetch"
+    },
+    "testrail": [],
+    "status": "Not found",
+    "statusNote": "No strong/partial candidates",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 14,
+    "sourceId": 14,
+    "title": "Изменение Sample Date — поле отображается",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-attributes.spec.ts",
+      "testName": "TA-010: Edit Sample Date - triggers magnetic params fetch"
+    },
+    "testrail": [
+      {
+        "caseId": "314572",
+        "title": "Send only changed attributes - Grid Convergence field with trajectory recalculation",
+        "score": "Low",
+        "reason": "Shared keywords: attributes, displayed, rendered, shown, trajectory, отображается, поле"
+      },
+      {
+        "caseId": "314584",
+        "title": "Send only changed attributes - Sample Date with calculated magnetic model",
+        "score": "Low",
+        "reason": "Shared keywords: attributes, date, magnetic, sample, дату, поле"
+      },
+      {
+        "caseId": "314573",
+        "title": "Send only changed attributes - Azimuth VS field with trajectory recalculation",
+        "score": "Low",
+        "reason": "Shared keywords: attributes, trajectory, поле"
+      }
+    ],
+    "status": "Partial",
+    "statusNote": "Functional core matched (4/12 core tokens)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 15,
+    "sourceId": 15,
+    "title": "Выбор магнитной модели — параметры подставляются",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-attributes.spec.ts",
+      "testName": "TA-011: Magnetic parameters auto-populate after model change"
+    },
+    "testrail": [
+      {
+        "caseId": "314587",
+        "title": "Send only changed attributes - User Defined magnetic fields",
+        "score": "Low",
+        "reason": "Shared keywords: angle, attributes, declination, dip, field, magnetic, model, strength, значение, поле"
+      },
+      {
+        "caseId": "314572",
+        "title": "Send only changed attributes - Grid Convergence field with trajectory recalculation",
+        "score": "Low",
+        "reason": "Shared keywords: attributes, field, trajectory, значение, поле, поля"
+      },
+      {
+        "caseId": "314573",
+        "title": "Send only changed attributes - Azimuth VS field with trajectory recalculation",
+        "score": "Low",
+        "reason": "Shared keywords: attributes, field, trajectory, значение, поле, поля"
+      }
+    ],
+    "status": "Partial",
+    "statusNote": "Functional core matched (2/10 core tokens)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 16,
+    "sourceId": 16,
+    "title": "Без Grid Convergence — колонка AZIM TN скрыта",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-azimuth.spec.ts",
+      "testName": "TAZ-001: Without Grid Convergence - AZIM TN column hidden"
+    },
+    "testrail": [
+      {
+        "caseId": "314553",
+        "title": "Trajectory table Grid Convergence impact from StarSteer",
+        "score": "Medium",
+        "reason": "Shared keywords: azim, column, convergence, gn, grid, table, tn, trajectory, колонка, скрыта"
+      },
+      {
+        "caseId": "314573",
+        "title": "Send only changed attributes - Azimuth VS field with trajectory recalculation",
+        "score": "Low",
+        "reason": "Shared keywords: azimuth, column, gn, trajectory, колонка, таблице, траектории"
+      },
+      {
+        "caseId": "314526",
+        "title": "Display trajectory table structure and headers",
+        "score": "Low",
+        "reason": "Shared keywords: azim, convergence, displayed, gn, grid, rendered, shown, table, tn, trajectory"
+      }
+    ],
+    "status": "Partial",
+    "statusNote": "Functional core matched (5/10 core tokens)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 17,
+    "sourceId": 17,
+    "title": "Без Grid Convergence — AZIM GN редактируется",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-azimuth.spec.ts",
+      "testName": "TAZ-002: Without Grid Convergence - AZIM GN is editable"
+    },
+    "testrail": [
+      {
+        "caseId": "314573",
+        "title": "Send only changed attributes - Azimuth VS field with trajectory recalculation",
+        "score": "Low",
+        "reason": "Shared keywords: azimuth, gn, trajectory, значение, изменить, обновляется, таблице"
+      },
+      {
+        "caseId": "153768",
+        "title": "Validation input Azimuth VS (GN) in Surface Location in side bar in Well Trajectory",
+        "score": "Low",
+        "reason": "Shared keywords: azimuth, gn, trajectory, значение, от"
+      },
+      {
+        "caseId": "314572",
+        "title": "Send only changed attributes - Grid Convergence field with trajectory recalculation",
+        "score": "Low",
+        "reason": "Shared keywords: azim, convergence, gn, grid, trajectory, значение, изменить, обновляется, таблице"
+      }
+    ],
+    "status": "Partial",
+    "statusNote": "Functional core matched (5/12 core tokens)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 18,
+    "sourceId": 18,
+    "title": "С Grid Convergence — колонка AZIM TN отображается",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-azimuth.spec.ts",
+      "testName": "TAZ-003: With Grid Convergence - AZIM TN column visible"
+    },
+    "testrail": [
+      {
+        "caseId": "314553",
+        "title": "Trajectory table Grid Convergence impact from StarSteer",
+        "score": "Medium",
+        "reason": "Shared keywords: azim, column, convergence, gn, grid, table, tn, trajectory, колонка, таблице"
+      },
+      {
+        "caseId": "314572",
+        "title": "Send only changed attributes - Grid Convergence field with trajectory recalculation",
+        "score": "Low",
+        "reason": "Shared keywords: azim, column, convergence, displayed, gn, grid, rendered, shown, tn, trajectory"
+      },
+      {
+        "caseId": "314573",
+        "title": "Send only changed attributes - Azimuth VS field with trajectory recalculation",
+        "score": "Low",
+        "reason": "Shared keywords: azimuth, column, gn, trajectory, колонка, таблице, траектории"
+      }
+    ],
+    "status": "Partial",
+    "statusNote": "Functional core matched (6/10 core tokens)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 19,
+    "sourceId": 19,
+    "title": "С Grid Convergence — AZIM GN только для чтения",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-azimuth.spec.ts",
+      "testName": "TAZ-004: With Grid Convergence - AZIM GN is read-only (calculated)"
+    },
+    "testrail": [
+      {
+        "caseId": "314544",
+        "title": "Verify trajectory table read-only mode for locked well",
+        "score": "Low",
+        "reason": "Shared keywords: azim, gn, only, read, trajectory, редактирования, чтения"
+      },
+      {
+        "caseId": "314538",
+        "title": "Verify AZIM GN is read-only when Grid Convergence not equal to zero",
+        "score": "Low",
+        "reason": "Shared keywords: azim, convergence, gn, grid, only, read, автоматически, рассчитывается, редактирования"
+      },
+      {
+        "caseId": "314553",
+        "title": "Trajectory table Grid Convergence impact from StarSteer",
+        "score": "Low",
+        "reason": "Shared keywords: azim, convergence, gn, grid, only, read, trajectory, проверить"
+      }
+    ],
+    "status": "Partial",
+    "statusNote": "Functional core matched (6/12 core tokens)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 20,
+    "sourceId": 20,
+    "title": "С Grid Convergence — AZIM TN редактируется в строке Tie-In",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-azimuth.spec.ts",
+      "testName": "TAZ-005: With Grid Convergence - AZIM TN is editable on Tie-In row"
+    },
+    "testrail": [
+      {
+        "caseId": "287267",
+        "title": "Edit AZIM TN field when Grid Convergence not equal to 0",
+        "score": "Low",
+        "reason": "Shared keywords: azim, convergence, displayed, grid, rendered, shown, tie, tn, ввода, кликнуть"
+      },
+      {
+        "caseId": "155900",
+        "title": "Impossible to change Stop MD value in Well Plan Trajectory",
+        "score": "Low",
+        "reason": "Shared keywords: row, trajectory, доступна, редактирования, ячейка, ячейке, ячейку"
+      },
+      {
+        "caseId": "287260",
+        "title": "Display Tie-in row on Well Trajectory opening",
+        "score": "Low",
+        "reason": "Shared keywords: azim, displayed, rendered, row, shown, tie, tn, trajectory, отображается, поля"
+      }
+    ],
+    "status": "Partial",
+    "statusNote": "Functional core matched (6/12 core tokens)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 21,
+    "sourceId": 21,
+    "title": "Редактирование AZIM TN — перерасчёт AZIM GN",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-azimuth.spec.ts",
+      "testName": "TAZ-006: Edit AZIM TN and verify optimistic AZIM GN recalculation"
+    },
+    "testrail": [
+      {
+        "caseId": "314573",
+        "title": "Send only changed attributes - Azimuth VS field with trajectory recalculation",
+        "score": "Low",
+        "reason": "Shared keywords: azimuth, gn, recalculation, trajectory, значение, изменить, обновляется"
+      },
+      {
+        "caseId": "314547",
+        "title": "Verify trajectory recalculation on wellheader changes",
+        "score": "Low",
+        "reason": "Shared keywords: azim, azimuth, gn, recalculation, trajectory, verify, изменении, изменить, проверить"
+      },
+      {
+        "caseId": "314552",
+        "title": "Trajectory table recalculation on wellheader changes from StarSteer",
+        "score": "Low",
+        "reason": "Shared keywords: azimuth, recalculation, trajectory, изменении, изменить, обновляется, пересчитывается, проверить"
+      }
+    ],
+    "status": "Partial",
+    "statusNote": "Functional core matched (5/12 core tokens)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 22,
+    "sourceId": 22,
+    "title": "Таблица Survey Program отображается",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-survey-program.spec.ts",
+      "testName": "TSP-001: Survey Program table renders"
+    },
+    "testrail": [
+      {
+        "caseId": "155893",
+        "title": "Displaying when Survey Program table is empty in parent well",
+        "score": "Low",
+        "reason": "Shared keywords: displayed, open, program, rendered, row, shown, survey, table, trajectory, кнопка"
+      },
+      {
+        "caseId": "155894",
+        "title": "Displaying when Survey Program table is not empty in parent well",
+        "score": "Low",
+        "reason": "Shared keywords: displayed, open, program, rendered, row, shown, survey, table, trajectory, кнопка"
+      },
+      {
+        "caseId": "314544",
+        "title": "Verify trajectory table read-only mode for locked well",
+        "score": "Low",
+        "reason": "Shared keywords: table, trajectory, добавления, отображаются, траектории"
+      }
+    ],
+    "status": "Partial",
+    "statusNote": "Functional core matched (4/10 core tokens)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 23,
+    "sourceId": 23,
+    "title": "Добавление строки в Survey Program",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-survey-program.spec.ts",
+      "testName": "TSP-002: Add survey program row"
+    },
+    "testrail": [
+      {
+        "caseId": "155895",
+        "title": "Impossible to add new row in Well Plan Trajectory",
+        "score": "Medium",
+        "reason": "Shared keywords: add, program, row, survey, trajectory, добавить, добавление, строк, строки, строку"
+      },
+      {
+        "caseId": "314588",
+        "title": "Send only changed attributes - Survey Program modification",
+        "score": "Low",
+        "reason": "Shared keywords: program, row, survey, добавить, строки, строку, таблице"
+      },
+      {
+        "caseId": "155894",
+        "title": "Displaying when Survey Program table is not empty in parent well",
+        "score": "Low",
+        "reason": "Shared keywords: add, program, row, survey, trajectory, проверить, строк, таблице"
+      }
+    ],
+    "status": "Partial",
+    "statusNote": "Functional core matched (7/12 core tokens)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 24,
+    "sourceId": 24,
+    "title": "Изменение toolcode в Survey Program через выпадающий список",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-survey-program.spec.ts",
+      "testName": "TSP-003: Edit toolcode via dropdown"
+    },
+    "testrail": [
+      {
+        "caseId": "155899",
+        "title": "Impossible to delete rows in Well Plan Trajectory",
+        "score": "Low",
+        "reason": "Shared keywords: displayed, program, rendered, row, shown, survey, toolcode, trajectory, отображается, строке"
+      },
+      {
+        "caseId": "155893",
+        "title": "Displaying when Survey Program table is empty in parent well",
+        "score": "Low",
+        "reason": "Shared keywords: displayed, program, rendered, row, shown, survey, toolcode, trajectory, отображается, проверить"
+      },
+      {
+        "caseId": "314588",
+        "title": "Send only changed attributes - Survey Program modification",
+        "score": "Low",
+        "reason": "Shared keywords: program, row, survey, toolcode, значение, строки"
+      }
+    ],
+    "status": "Partial",
+    "statusNote": "Functional core matched (2/12 core tokens)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 25,
+    "sourceId": 25,
+    "title": "Start MD в Survey Program — только для чтения",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-survey-program.spec.ts",
+      "testName": "TSP-004: Edit Start MD value - should be read-only (auto-calculated)"
+    },
+    "testrail": [
+      {
+        "caseId": "314544",
+        "title": "Verify trajectory table read-only mode for locked well",
+        "score": "Low",
+        "reason": "Shared keywords: md, only, read, trajectory, чтения"
+      },
+      {
+        "caseId": "314528",
+        "title": "Add new trajectory row with auto-focus and mandatory fields highlighting",
+        "score": "Low",
+        "reason": "Shared keywords: auto, md, trajectory, автоматически, поле"
+      },
+      {
+        "caseId": "285743",
+        "title": "Displaying Start MD when Stop MD isn't set in the previous row for Typewell",
+        "score": "Low",
+        "reason": "Shared keywords: displayed, first, md, program, rendered, shown, start, survey, trajectory, значение"
+      }
+    ],
+    "status": "Partial",
+    "statusNote": "Functional core matched (5/12 core tokens)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 26,
+    "sourceId": 26,
+    "title": "Изменение Stop MD в Survey Program",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-survey-program.spec.ts",
+      "testName": "TSP-005: Edit Stop MD value"
+    },
+    "testrail": [
+      {
+        "caseId": "285741",
+        "title": "Input validation when Stop MD is non-numeric value for Typewell",
+        "score": "Low",
+        "reason": "Shared keywords: displayed, first, md, program, rendered, shown, stop, survey, trajectory, value"
+      },
+      {
+        "caseId": "155838",
+        "title": "Input validation when Stop MD is non-numeric value",
+        "score": "Low",
+        "reason": "Shared keywords: displayed, first, md, program, rendered, shown, stop, survey, trajectory, value"
+      },
+      {
+        "caseId": "285744",
+        "title": "Displaying Start MD when Stop MD is set in the previous row for Typewell",
+        "score": "Low",
+        "reason": "Shared keywords: displayed, first, md, program, rendered, shown, stop, survey, trajectory, ввести"
+      }
+    ],
+    "status": "Partial",
+    "statusNote": "Functional core matched (7/12 core tokens)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 27,
+    "sourceId": 27,
+    "title": "Удаление строки в Survey Program",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-survey-program.spec.ts",
+      "testName": "TSP-006: Delete survey program row"
+    },
+    "testrail": [
+      {
+        "caseId": "155899",
+        "title": "Impossible to delete rows in Well Plan Trajectory",
+        "score": "Low",
+        "reason": "Shared keywords: delete, program, row, survey, trajectory, строк, строку, удаления"
+      },
+      {
+        "caseId": "314541",
+        "title": "Delete single trajectory row using delete button",
+        "score": "Low",
+        "reason": "Shared keywords: delete, row, trajectory, строки, таблице, удаления"
+      },
+      {
+        "caseId": "155895",
+        "title": "Impossible to add new row in Well Plan Trajectory",
+        "score": "Low",
+        "reason": "Shared keywords: program, row, survey, trajectory, строк, строки, строку, таблице"
+      }
+    ],
+    "status": "Partial",
+    "statusNote": "Functional core matched (6/12 core tokens)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 28,
+    "sourceId": 28,
+    "title": "Состояние Survey Program после операций",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-survey-program.spec.ts",
+      "testName": "TSP-007: Survey Program state after operations"
+    },
+    "testrail": [
+      {
+        "caseId": "314544",
+        "title": "Verify trajectory table read-only mode for locked well",
+        "score": "Low",
+        "reason": "Shared keywords: table, trajectory, добавления, состояние, строк, таблицы, удаления"
+      },
+      {
+        "caseId": "155894",
+        "title": "Displaying when Survey Program table is not empty in parent well",
+        "score": "Low",
+        "reason": "Shared keywords: displayed, program, rendered, row, shown, survey, table, trajectory, кнопка, отображается"
+      },
+      {
+        "caseId": "314546",
+        "title": "Verify trajectory table editing access for authorized roles",
+        "score": "Low",
+        "reason": "Shared keywords: table, trajectory, добавления, строк, удаления"
+      }
+    ],
+    "status": "Partial",
+    "statusNote": "Functional core matched (6/12 core tokens)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 29,
+    "sourceId": 29,
+    "title": "Открытие вкладки траектории и отображение таблицы",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-table.spec.ts",
+      "testName": "TT-001: Open trajectory tab and verify table renders"
+    },
+    "testrail": [
+      {
+        "caseId": "314562",
+        "title": "Trajectory table data loading from WDL",
+        "score": "Medium",
+        "reason": "Shared keywords: open, table, trajectory, вкладки, вкладку, открытии, открыть, таблицы, траектории"
+      },
+      {
+        "caseId": "314526",
+        "title": "Display trajectory table structure and headers",
+        "score": "Low",
+        "reason": "Shared keywords: display, displayed, render, rendered, shown, table, trajectory, отображается, отображение, таблица"
+      },
+      {
+        "caseId": "314544",
+        "title": "Verify trajectory table read-only mode for locked well",
+        "score": "Low",
+        "reason": "Shared keywords: table, trajectory, verify, отображаются, таблицы, траектории"
+      }
+    ],
+    "status": "Partial",
+    "statusNote": "Functional core matched (4/9 core tokens)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 30,
+    "sourceId": 30,
+    "title": "Таблица траектории содержит ожидаемые колонки",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-table.spec.ts",
+      "testName": "TT-002: Table displays correct columns"
+    },
+    "testrail": [
+      {
+        "caseId": "143449",
+        "title": "Displaying table columns",
+        "score": "Medium",
+        "reason": "Shared keywords: azim, columns, dls, incl, md, table, tvd, tvdss, vs, заголовки"
+      },
+      {
+        "caseId": "314566",
+        "title": "Real-time trajectory import with Replace from StarSteer",
+        "score": "Medium",
+        "reason": "Shared keywords: azim, column, dls, incl, md, table, trajectory, tvd, tvdss, vs"
+      },
+      {
+        "caseId": "314526",
+        "title": "Display trajectory table structure and headers",
+        "score": "Medium",
+        "reason": "Shared keywords: azim, dls, incl, md, table, trajectory, tvd, tvdss, vs, таблица"
+      }
+    ],
+    "status": "Partial",
+    "statusNote": "2–3 close matches (30–60%)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 31,
+    "sourceId": 31,
+    "title": "Редактирование MD — обновление и перерасчёт TVD",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-table.spec.ts",
+      "testName": "TT-003: Edit MD value and verify optimistic update with recalculation"
+    },
+    "testrail": [
+      {
+        "caseId": "314552",
+        "title": "Trajectory table recalculation on wellheader changes from StarSteer",
+        "score": "Low",
+        "reason": "Shared keywords: recalculation, table, trajectory, изменении, изменить, обновляется, пересчитывается, проверить"
+      },
+      {
+        "caseId": "314545",
+        "title": "Verify trajectory table access control for VIEWER role",
+        "score": "Low",
+        "reason": "Shared keywords: edit, editing, table, trajectory, verify, редактирование"
+      },
+      {
+        "caseId": "314547",
+        "title": "Verify trajectory recalculation on wellheader changes",
+        "score": "Low",
+        "reason": "Shared keywords: md, recalculation, table, trajectory, verify, значения, изменении, изменить, обновление, проверить"
+      }
+    ],
+    "status": "Partial",
+    "statusNote": "Functional core matched (3/12 core tokens)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 32,
+    "sourceId": 32,
+    "title": "Редактирование INCL — перерасчёт TVD",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-table.spec.ts",
+      "testName": "TT-004: Edit INCL value and verify recalculation"
+    },
+    "testrail": [
+      {
+        "caseId": "314552",
+        "title": "Trajectory table recalculation on wellheader changes from StarSteer",
+        "score": "Low",
+        "reason": "Shared keywords: recalculation, table, trajectory, изменении, изменить, обновляется, пересчитывается, проверить"
+      },
+      {
+        "caseId": "314556",
+        "title": "Trajectory table DLS recalculation after point changes",
+        "score": "Low",
+        "reason": "Shared keywords: incl, recalculation, table, trajectory, изменить, пересчитывается, проверить"
+      },
+      {
+        "caseId": "314545",
+        "title": "Verify trajectory table access control for VIEWER role",
+        "score": "Low",
+        "reason": "Shared keywords: edit, editing, table, trajectory, verify, редактирование"
+      }
+    ],
+    "status": "Partial",
+    "statusNote": "Functional core matched (4/12 core tokens)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 33,
+    "sourceId": 33,
+    "title": "Редактирование AZIM — перерасчёт N/S",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-table.spec.ts",
+      "testName": "TT-005: Edit AZIM value and verify recalculation"
+    },
+    "testrail": [
+      {
+        "caseId": "314552",
+        "title": "Trajectory table recalculation on wellheader changes from StarSteer",
+        "score": "Low",
+        "reason": "Shared keywords: recalculation, table, trajectory, изменении, изменить, обновляется, пересчитывается, проверить"
+      },
+      {
+        "caseId": "314556",
+        "title": "Trajectory table DLS recalculation after point changes",
+        "score": "Low",
+        "reason": "Shared keywords: azim, recalculation, table, trajectory, изменить, пересчитывается, проверить"
+      },
+      {
+        "caseId": "314547",
+        "title": "Verify trajectory recalculation on wellheader changes",
+        "score": "Low",
+        "reason": "Shared keywords: 45, azim, recalculation, table, trajectory, verify, изменении, изменить, проверить"
+      }
+    ],
+    "status": "Partial",
+    "statusNote": "Functional core matched (5/11 core tokens)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 34,
+    "sourceId": 34,
+    "title": "Добавление строки в таблицу траектории — плейсхолдеры и расчёт после заполнения",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-table.spec.ts",
+      "testName": "TT-006: Add new row - verify appearance, warning highlight, and calculation after fill"
+    },
+    "testrail": [
+      {
+        "caseId": "314528",
+        "title": "Add new trajectory row with auto-focus and mandatory fields highlighting",
+        "score": "Low",
+        "reason": "Shared keywords: add, azim, incl, md, new, row, table, trajectory, добавления, заполнения"
+      },
+      {
+        "caseId": "314544",
+        "title": "Verify trajectory table read-only mode for locked well",
+        "score": "Low",
+        "reason": "Shared keywords: 90, azim, incl, md, table, trajectory, verify, добавления, отображаются, строк"
+      },
+      {
+        "caseId": "314546",
+        "title": "Verify trajectory table editing access for authorized roles",
+        "score": "Low",
+        "reason": "Shared keywords: incl, md, table, trajectory, verify, добавления, строк, траектории"
+      }
+    ],
+    "status": "Partial",
+    "statusNote": "Functional core matched (3/12 core tokens)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 35,
+    "sourceId": 35,
+    "title": "Удаление строки в таблице траектории",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-table.spec.ts",
+      "testName": "TT-007: Delete row and verify removal"
+    },
+    "testrail": [
+      {
+        "caseId": "314545",
+        "title": "Verify trajectory table access control for VIEWER role",
+        "score": "Low",
+        "reason": "Shared keywords: table, trajectory, verify, строк, таблице, траектории, удаление"
+      },
+      {
+        "caseId": "314544",
+        "title": "Verify trajectory table read-only mode for locked well",
+        "score": "Low",
+        "reason": "Shared keywords: table, trajectory, verify, строк, таблице, траектории, удаления"
+      },
+      {
+        "caseId": "314546",
+        "title": "Verify trajectory table editing access for authorized roles",
+        "score": "Low",
+        "reason": "Shared keywords: table, trajectory, verify, строк, таблице, траектории, удаления"
+      }
+    ],
+    "status": "Partial",
+    "statusNote": "Functional core matched (2/12 core tokens)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 36,
+    "sourceId": 36,
+    "title": "Валидация MD — отрицательные и вне диапазона значения не принимаются",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-table.spec.ts",
+      "testName": "TT-008: MD validation - reject negative and out of range values"
+    },
+    "testrail": [],
+    "status": "Not found",
+    "statusNote": "No strong/partial candidates",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 37,
+    "sourceId": 37,
+    "title": "Валидация MD — немонотонные значения не принимаются",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-table.spec.ts",
+      "testName": "TT-009: MD validation - reject non-monotonic values (existing and new rows)"
+    },
+    "testrail": [
+      {
+        "caseId": "314556",
+        "title": "Trajectory table DLS recalculation after point changes",
+        "score": "Low",
+        "reason": "Shared keywords: table, trajectory, необходимости, проверить, следующей"
+      },
+      {
+        "caseId": "314544",
+        "title": "Verify trajectory table read-only mode for locked well",
+        "score": "Low",
+        "reason": "Shared keywords: 1000, md, table, trajectory"
+      },
+      {
+        "caseId": "314553",
+        "title": "Trajectory table Grid Convergence impact from StarSteer",
+        "score": "Low",
+        "reason": "Shared keywords: table, trajectory, значение, значения, проверить"
+      }
+    ],
+    "status": "Partial",
+    "statusNote": "Functional core matched (2/12 core tokens)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 38,
+    "sourceId": 38,
+    "title": "Валидация INCL — значения вне диапазона 0–180 не принимаются",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-table.spec.ts",
+      "testName": "TT-010: INCL validation - reject out of range (0-180)"
+    },
+    "testrail": [
+      {
+        "caseId": "314526",
+        "title": "Display trajectory table structure and headers",
+        "score": "Low",
+        "reason": "Shared keywords: displayed, incl, rendered, shown, table, trajectory, отображается, проверить"
+      },
+      {
+        "caseId": "314554",
+        "title": "Trajectory table precision consistency after real-time updates",
+        "score": "Low",
+        "reason": "Shared keywords: displayed, incl, rendered, shown, table, trajectory, отображается, проверить"
+      },
+      {
+        "caseId": "314553",
+        "title": "Trajectory table Grid Convergence impact from StarSteer",
+        "score": "Low",
+        "reason": "Shared keywords: table, trajectory, значение, значения, проверить"
+      }
+    ],
+    "status": "Partial",
+    "statusNote": "Functional core matched (2/12 core tokens)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 39,
+    "sourceId": 39,
+    "title": "Строка Tie-In не удаляется",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-table.spec.ts",
+      "testName": "TT-011: Tie-in row is not deletable"
+    },
+    "testrail": [
+      {
+        "caseId": "314541",
+        "title": "Delete single trajectory row using delete button",
+        "score": "Low",
+        "reason": "Shared keywords: row, table, trajectory, строка, строки, удаления, удаляется"
+      },
+      {
+        "caseId": "155899",
+        "title": "Impossible to delete rows in Well Plan Trajectory",
+        "score": "Low",
+        "reason": "Shared keywords: displayed, rendered, row, shown, trajectory, кнопка, отображается, строка, строку, удаления"
+      },
+      {
+        "caseId": "314544",
+        "title": "Verify trajectory table read-only mode for locked well",
+        "score": "Low",
+        "reason": "Shared keywords: table, trajectory, удаления"
+      }
+    ],
+    "status": "Partial",
+    "statusNote": "Functional core matched (3/12 core tokens)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 40,
+    "sourceId": 40,
+    "title": "Строка Tie-In — редактирование TVD, N/S, E/W и перерасчёт",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-table.spec.ts",
+      "testName": "TT-012: Tie-in row TVD/NS/EW editable with optimistic recalculation"
+    },
+    "testrail": [
+      {
+        "caseId": "314556",
+        "title": "Trajectory table DLS recalculation after point changes",
+        "score": "Low",
+        "reason": "Shared keywords: recalculation, table, trajectory, изменить, пересчитывается, проверить, следующей"
+      },
+      {
+        "caseId": "314552",
+        "title": "Trajectory table recalculation on wellheader changes from StarSteer",
+        "score": "Low",
+        "reason": "Shared keywords: recalculation, table, trajectory, изменить, обновляются, пересчитывается, проверить"
+      },
+      {
+        "caseId": "314545",
+        "title": "Verify trajectory table access control for VIEWER role",
+        "score": "Low",
+        "reason": "Shared keywords: edit, editing, table, trajectory, редактирование"
+      }
+    ],
+    "status": "Partial",
+    "statusNote": "Functional core matched (3/12 core tokens)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 41,
+    "sourceId": 41,
+    "title": "Поля Time Zone и Spud Date видны для скважины (wellbore)",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-well-fields.spec.ts",
+      "testName": "WF-001 Time Zone and Spud Date are visible for wellbore entity"
+    },
+    "testrail": [
+      {
+        "caseId": "156086",
+        "title": "Default view for Well block in sidebar",
+        "score": "Medium",
+        "reason": "Shared keywords: attributes, displayed, open, rendered, shown, sidebar, trajectory, well, атрибутов, открыть"
+      },
+      {
+        "caseId": "153424",
+        "title": "Displaying data for locked wellbore on  Well Trajectory",
+        "score": "Medium",
+        "reason": "Shared keywords: display, open, render, trajectory, well, wellbore, открыть, отображаются, отображение, поля"
+      },
+      {
+        "caseId": "153426",
+        "title": "Displaying data for  unlocked wellbore on  Well Trajectory",
+        "score": "Medium",
+        "reason": "Shared keywords: display, open, render, trajectory, well, wellbore, открыть, отображаются, отображение, поля"
+      }
+    ],
+    "status": "Partial",
+    "statusNote": "2–3 close matches (30–60%)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 42,
+    "sourceId": 42,
+    "title": "Поля Time Zone и Spud Date скрыты для typewell",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-well-fields.spec.ts",
+      "testName": "WF-002 Time Zone and Spud Date are hidden for typewell entity"
+    },
+    "testrail": [
+      {
+        "caseId": "423970",
+        "title": "Typewell Trajectory tab state is saved and restored in drillspot-settings",
+        "score": "Medium",
+        "reason": "Shared keywords: entity, trajectory, typewell, страницу"
+      },
+      {
+        "caseId": "285685",
+        "title": "Project coordinate system validation errors do not affect the disabling of inputs in the sidebar for Typewell",
+        "score": "Medium",
+        "reason": "Shared keywords: displayed, panel, rendered, shown, sidebar, trajectory, typewell, отображается, поле, поля"
+      },
+      {
+        "caseId": "285673",
+        "title": "Typewell sidebar block display",
+        "score": "Medium",
+        "reason": "Shared keywords: displayed, rendered, shown, sidebar, trajectory, typewell, отображается, отображаются, поля, проверить"
+      }
+    ],
+    "status": "Partial",
+    "statusNote": "2–3 close matches (30–60%)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 43,
+    "sourceId": 43,
+    "title": "Поля Time Zone и Spud Date скрыты для well plan",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-well-fields.spec.ts",
+      "testName": "WF-003 Time Zone and Spud Date are hidden for well plan entity"
+    },
+    "testrail": [
+      {
+        "caseId": "122024",
+        "title": "Well Plan Trajectory tab opens only one time",
+        "score": "Medium",
+        "reason": "Shared keywords: displayed, open, plan, rendered, shown, time, trajectory, well, открыть, отображается"
+      },
+      {
+        "caseId": "153796",
+        "title": "Displaying Depth Reference  with Type - Land in side bar in Well Trajectory of well plan for meter project",
+        "score": "Medium",
+        "reason": "Shared keywords: displayed, open, plan, rendered, shown, trajectory, well, открыть, отображается, отображаются"
+      },
+      {
+        "caseId": "269718",
+        "title": "Displaying Depth Reference  with Type - Land in side bar in Well Trajectory of well plan for feet project",
+        "score": "Medium",
+        "reason": "Shared keywords: displayed, open, plan, rendered, shown, trajectory, well, открыть, отображается, отображаются"
+      }
+    ],
+    "status": "Partial",
+    "statusNote": "2–3 close matches (30–60%)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 44,
+    "sourceId": 44,
+    "title": "Выбор Time Zone — список опций и обновление значения",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-well-fields.spec.ts",
+      "testName": "WF-004 Timezone selector displays options and allows selection"
+    },
+    "testrail": [],
+    "status": "Not found",
+    "statusNote": "No strong/partial candidates",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 45,
+    "sourceId": 45,
+    "title": "Поле Spud Date доступно для взаимодействия для скважины",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-well-fields.spec.ts",
+      "testName": "WF-005 Spud Date picker is interactive for wellbore entity"
+    },
+    "testrail": [
+      {
+        "caseId": "153424",
+        "title": "Displaying data for locked wellbore on  Well Trajectory",
+        "score": "Medium",
+        "reason": "Shared keywords: trajectory, well, wellbore, поля"
+      },
+      {
+        "caseId": "153426",
+        "title": "Displaying data for  unlocked wellbore on  Well Trajectory",
+        "score": "Medium",
+        "reason": "Shared keywords: trajectory, well, wellbore, поля"
+      },
+      {
+        "caseId": "405154",
+        "title": "Verify multiple Trajectory tabs can be opened for different wellbores",
+        "score": "Medium",
+        "reason": "Shared keywords: trajectory, wellbore, проверить"
+      }
+    ],
+    "status": "Partial",
+    "statusNote": "2–3 close matches (30–60%)",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  },
+  {
+    "id": 46,
+    "sourceId": 46,
+    "title": "Time Zone и Spud Date недоступны без права на обновление",
+    "autotest": {
+      "path": "tests from solo-rtm/trajectory/trajectory-well-fields.spec.ts",
+      "testName": "WF-006 Time Zone and Spud Date are disabled without update permission"
+    },
+    "testrail": [],
+    "status": "Not found",
+    "statusNote": "No strong/partial candidates",
+    "tagsSuggested": [
+      "@regression",
+      "@trajectory"
+    ]
+  }
+]

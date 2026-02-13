@@ -1,0 +1,471 @@
+# TestRail export: project 5, section subtree 6277
+
+Generated: 2026-02-12T09:01:29.570Z
+
+- Root section: 6277 — Survey Spreadsheets
+- Sections in subtree: 35
+- Cases exported: 423
+
+## Sections
+
+- 6277: Survey Spreadsheets
+- 37946: Trajectory tab multi-instance behavior
+- 9867: Trajectory table
+- 6980: Spreadsheet`s sidebar
+- 21223: Typewell
+- 21295: Survey Program
+- 21294: Magnetics
+- 21293: Location Uncertainty
+- 21226: Depth Reference
+- 21225: Surface Location
+- 21224: Typewell
+- 7795: Well plan
+- 8162: Survey Program
+- 8039: Location Uncertainly of well plan
+- 7817: Depth Reference of well plan
+- 7797: Surface Location of well plan
+- 6981: Well
+- 8152: Survey Program
+- 8193: Magnetics of well
+- 8038: Location Uncertainly of well
+- 7816: Depth Reference of well
+- 7796: Surface Location of well
+- 25188: Well
+- 6754: Well trajectory table
+- 26024: Table implement row, column and cell pasting
+- 6757: Table
+- 6755: Tie-in
+- 6756: Table headers
+- 6280: User rights
+- 6282: Edit*
+- 6281: Open and read
+- 22177: Opening Typewell Trajectory tab
+- 6279: Opening Well Plan Trajectory tab
+- 6278: Opening Well Trajectory tab
+- 7794: Load wellbore data for Well Trajectory
+
+## Cases
+
+- TR#405154 (section 37946): Verify multiple Trajectory tabs can be opened for different wellbores
+- TR#405155 (section 37946): Verify Trajectory tab opens correctly for wellplan
+- TR#405156 (section 37946): Verify Trajectory tab opens correctly for typewell
+- TR#405157 (section 37946): Verify Trajectory tab remains open on project switch with DataSource update
+- TR#405158 (section 37946): Verify clicking wellbore in tree updates current Trajectory tab instead of creating new
+- TR#405159 (section 37946): Verify clicking wellplan in tree updates current Trajectory tab
+- TR#405160 (section 37946): Verify clicking typewell in tree updates current Trajectory tab
+- TR#405161 (section 37946): Verify Trajectory tab updates to another wellbore when current is deleted
+- TR#405162 (section 37946): Verify Trajectory tab updates when typewell is deleted
+- TR#405163 (section 37946): Verify URL navigation opens correct Trajectory tab
+- TR#405164 (section 37946): Verify URL is correctly formed for active Trajectory tab
+- TR#405165 (section 37946): Verify trajectory changes sync to dashboard widgets with same wellbore
+- TR#405166 (section 37946): Verify sync works between Trajectory and dashboards in different tabsets
+- TR#405167 (section 37946): Verify data saves independently for each Trajectory tab
+- TR#405168 (section 37946): Verify tab header displays correct wellbore name
+- TR#405169 (section 37946): Verify only active Trajectory tab updates on tree selection
+- TR#405170 (section 37946): Verify behavior when all wellbores are deleted
+- TR#405171 (section 37946): Verify Trajectory tab with multiple tabs on project switch assigns sources in order
+- TR#405172 (section 37946): Verify no JavaScript errors during Trajectory tab operations
+- TR#405173 (section 37946): Verify no server errors (500) during Trajectory tab operations
+- TR#171161 (section 9867): Trajectory table performance
+- TR#171162 (section 9867): Trajectory table performance (well plan)
+- TR#285734 (section 21295): Default table view in m-project for Typewell
+- TR#285735 (section 21295): Default table view in ft-project for Typewell
+- TR#285736 (section 21295): Default table view in ft-m project for Typewell
+- TR#285737 (section 21295): Adding new rows for Typewell
+- TR#285738 (section 21295): Displaying Delete button for rows for Typewell
+- TR#286128 (section 21295): Deleting first row for Typewell
+- TR#286129 (section 21295): Deleting last row for Typewell
+- TR#285739 (section 21295): Input validation when Stop MD equals to 0 for Typewell
+- TR#285740 (section 21295): Input validation when Stop MD is greater than 100000 for Typewell
+- TR#285741 (section 21295): Input validation when Stop MD is non-numeric value for Typewell
+- TR#285742 (section 21295): Input validation when Stop MD equals or less than MD in the previous row for Typewell
+- TR#285743 (section 21295): Displaying Start MD when Stop MD isn't set in the previous row for Typewell
+- TR#285744 (section 21295): Displaying Start MD when Stop MD is set in the previous row for Typewell
+- TR#286123 (section 21295): Displaying and saving in m-project for Typewell
+- TR#286124 (section 21295): Displaying and saving in ft-project for Typewell
+- TR#285745 (section 21295): Displaying and saving in ft-m project for Typewell
+- TR#286126 (section 21295): Survey Program switching between Typewells
+- TR#285715 (section 21294): Magnetics block display for Typewell
+- TR#285716 (section 21294): Magnetics fields - Model Name dependency on Sample Date
+- TR#318756 (section 21294): Magnetics Sample Date field - default behavior without spuddate
+- TR#285717 (section 21294): Magnetics Sample Date field - default behavior with spuddate
+- TR#285718 (section 21294): Magnetics Sample Date field - date persistence
+- TR#285719 (section 21294): Magnetics Model Name field - User Defined selection
+- TR#285720 (section 21294): Magnetics fields - User Defined values input
+- TR#285721 (section 21294): Magnetics Field Strength field - range validation
+- TR#285722 (section 21294): Magnetics Dip Angle field - input restriction beyond boundaries
+- TR#285723 (section 21294): Magnetics Declination field - input restriction beyond boundaries
+- TR#285724 (section 21294): Magnetics Model Name field - IGRF14 model selection
+- TR#285725 (section 21294): Magnetics Model Name field - IGRF14 validation error
+- TR#285726 (section 21294): Magnetics Model Name field - WMM2020 model selection
+- TR#285727 (section 21294): Magnetics Model Name field - WMM2020 validation error
+- TR#285728 (section 21294): Magnetics Model Name field - WMM2025 model selection
+- TR#285729 (section 21294): Magnetics Model Name field - WMMHR2025 validation error
+- TR#285730 (section 21294): Magnetics fields - model switching behavior
+- TR#285731 (section 21294): Magnetics fields - validation error clearing
+- TR#285732 (section 21294): Magnetics fields - disabled state for calculated models
+- TR#285733 (section 21294): Magnetics fields switching between Typewells
+- TR#285704 (section 21293): Location Uncertainty block display for Typewell
+- TR#285705 (section 21293): Location Uncertainty Vertical field - valid input
+- TR#285706 (section 21293): Location Uncertainty Vertical field - range validation
+- TR#285707 (section 21293): Location Uncertainty Horizontal field - valid input
+- TR#285708 (section 21293): Location Uncertainty Horizontal field - range validation
+- TR#285709 (section 21293): Location Uncertainty fields display and storage in foot project
+- TR#285710 (section 21293): Location Uncertainty fields switching between Typewells
+- TR#318754 (section 21293): Location Uncertainty fields display and storage in metric project
+- TR#318755 (section 21293): Location Uncertainty fields display and storage in field-metric project
+- TR#285694 (section 21226): Depth Reference block display for Typewell
+- TR#285696 (section 21226): Depth Reference Type field switching to Offshore
+- TR#285697 (section 21226): Depth Reference Type field switching to Land
+- TR#285698 (section 21226): Depth Reference KB Elevation field editing
+- TR#285699 (section 21226): Depth Reference KB Elevation field - range validation
+- TR#285700 (section 21226): Depth Reference Ground Level field - range validation
+- TR#285701 (section 21226): Depth Reference Water Depth field - range validation
+- TR#285702 (section 21226): Depth Reference fields display and storage in foot project
+- TR#318744 (section 21226): Depth Reference fields display and storage in metric project
+- TR#318745 (section 21226): Depth Reference fields display and storage in field-metric project
+- TR#285703 (section 21226): Depth Reference switching between Typewells
+- TR#285682 (section 21225): Surface Location block display for Typewell
+- TR#285683 (section 21225): Displaying a notice board about the absence of a coordinate system for Typewell
+- TR#285684 (section 21225): No display of the plate with notification about the absence of a coordinate system for Typewell
+- TR#285685 (section 21225): Project coordinate system validation errors do not affect the disabling of inputs in the sidebar for Typewell
+- TR#285686 (section 21225): Surface Location Xsrf field - valid input
+- TR#285687 (section 21225): Surface Location Xsrf field - range validation
+- TR#285688 (section 21225): Surface Location Ysrf field - valid input
+- TR#285689 (section 21225): Surface Location Ysrf field - range validation
+- TR#285692 (section 21225): Surface Location Grid Convergence field - valid input
+- TR#318364 (section 21225): Surface Location Grid Convergence field - input validation
+- TR#285693 (section 21225): Surface Location fields display and storage in foot project
+- TR#318366 (section 21225): Surface Location fields display and storage in field-metric project
+- TR#318365 (section 21225): Surface Location fields display and storage in metric project
+- TR#285691 (section 21225): Surface Location fields switching between Typewells
+- TR#285673 (section 21224): Typewell sidebar block display
+- TR#285674 (section 21224): Typewell Name field display
+- TR#285675 (section 21224): Typewell Name synchronization across interface elements
+- TR#285676 (section 21224): Editing Typewell Name field - length validation
+- TR#285677 (section 21224): Editing Typewell API field - valid input
+- TR#285678 (section 21224): Editing Typewell API field - length validation
+- TR#285679 (section 21224): Editing Typewell Operator field - valid input
+- TR#285680 (section 21224): Editing Typewell Operator field - length validation
+- TR#285681 (section 21224): Typewell sidebar switching between objects
+- TR#155893 (section 8162): Displaying when Survey Program table is empty in parent well
+- TR#155894 (section 8162): Displaying when Survey Program table is not empty in parent well
+- TR#155895 (section 8162): Impossible to add new row in Well Plan Trajectory
+- TR#155899 (section 8162): Impossible to delete rows in Well Plan Trajectory
+- TR#155900 (section 8162): Impossible to change Stop MD value in Well Plan Trajectory
+- TR#155896 (section 8162): Displaying in m-project
+- TR#155897 (section 8162): Displaying in ft-project
+- TR#155898 (section 8162): Displaying in ft-m project
+- TR#154652 (section 8039): Displaying Location Uncertainly in side bar in Well Trajectory of well plan
+- TR#154653 (section 8039): Changing value of Vertical in Location Uncertainly in side bar in Well Trajectory of well plan
+- TR#154654 (section 8039): Changing value of Horizontal in Location Uncertainly in side bar in Well Trajectory of well plan
+- TR#153796 (section 7817): Displaying Depth Reference  with Type - Land in side bar in Well Trajectory of well plan for meter project
+- TR#269718 (section 7817): Displaying Depth Reference  with Type - Land in side bar in Well Trajectory of well plan for feet project
+- TR#269719 (section 7817): Displaying Depth Reference  with Type - Land in side bar in Well Trajectory of well plan for feet-meter project
+- TR#153798 (section 7817): Displaying Depth Reference with Type - Offshore in side bar in Well Trajectory of well plan for meter project
+- TR#269720 (section 7817): Displaying Depth Reference with Type - Offshore in side bar in Well Trajectory of well plan for feet project
+- TR#269721 (section 7817): Displaying Depth Reference with Type - Offshore in side bar in Well Trajectory of well plan for feet-meter project
+- TR#171163 (section 7817): Validation of KB elevation input (Land)
+- TR#171164 (section 7817): Validation of KB elevation input (Offshore)
+- TR#171165 (section 7817): Validation of Ground Level input (Land)
+- TR#171166 (section 7817): Validation of Water Depth input (Offshore)
+- TR#171185 (section 7817): Validation of Air Gap input (Land)
+- TR#171186 (section 7817): Validation of Air Gap input (Offshore)
+- TR#153430 (section 7797): Displaying Surface Location in side bar in Well Trajectory of well plan
+- TR#153431 (section 7797): Enabled inputs  Surface Location in side bar in Well Trajectory of well plan
+- TR#153760 (section 7797): Disabled inputs  Surface Location in side bar in Well Trajectory of well plan
+- TR#153763 (section 7797): Valid values Xsrf  in Surface Location in side bar in Well Trajectory of well plan
+- TR#269715 (section 7797): Valid characters Xsrf  in Surface Location in side bar in Well Trajectory of well plan
+- TR#269716 (section 7797): Valid values Ysrf  in Surface Location in side bar in Well Trajectory of well plan
+- TR#269717 (section 7797): Valid characters Ysrf  in Surface Location in side bar in Well Trajectory of well plan
+- TR#314569 (section 6981): Send only changed attributes - Name field edit
+- TR#314570 (section 6981): Send only changed attributes - API field edit
+- TR#314571 (section 6981): Send only changed attributes - Operator field edit
+- TR#314579 (section 6981): Send only changed attributes - Xsrf with User Defined magnetic model
+- TR#314580 (section 6981): Send only changed attributes - Ysrf with User Defined magnetic model
+- TR#314581 (section 6981): Send only changed attributes - Xsrf with calculated magnetic model
+- TR#314582 (section 6981): Send only changed attributes - Ysrf with calculated magnetic model
+- TR#314572 (section 6981): Send only changed attributes - Grid Convergence field with trajectory recalculation
+- TR#314573 (section 6981): Send only changed attributes - Azimuth VS field with trajectory recalculation
+- TR#314574 (section 6981): Send only changed attributes - KB Elevation field with trajectory recalculation
+- TR#314575 (section 6981): Send only changed attributes - Type field switching
+- TR#314576 (section 6981): Send only changed attributes - Ground Level field
+- TR#314577 (section 6981): Send only changed attributes - Water Depth field
+- TR#314578 (section 6981): Send only changed attributes - Location Uncertainty fields
+- TR#314583 (section 6981): Send only changed attributes - Sample Date with User Defined model
+- TR#314584 (section 6981): Send only changed attributes - Sample Date with calculated magnetic model
+- TR#314585 (section 6981): Send only changed attributes - Model Name change to calculated model
+- TR#314586 (section 6981): Send only changed attributes - Model Name change to User Defined
+- TR#314587 (section 6981): Send only changed attributes - User Defined magnetic fields
+- TR#314588 (section 6981): Send only changed attributes - Survey Program modification
+- TR#314589 (section 6981): Send only changed attributes - invalid field not sent
+- TR#314590 (section 6981): Send only changed attributes - field becomes valid after error
+- TR#155834 (section 8152): Default table view in m-project
+- TR#155922 (section 8152): Default table view in ft-project
+- TR#155923 (section 8152): Default table view in ft-m project
+- TR#155840 (section 8152): Adding new rows
+- TR#155835 (section 8152): Displaying Delete button for rows
+- TR#155841 (section 8152): Deleting first row
+- TR#155892 (section 8152): Deleting last row
+- TR#155836 (section 8152): Input validation when Stop MD equals to 0
+- TR#155837 (section 8152): Input validation when Stop MD is greater than 100000
+- TR#155838 (section 8152): Input validation when Stop MD is non-numeric value
+- TR#155845 (section 8152): Input validation when Stop MD equals or less than MD in the previous row
+- TR#155839 (section 8152): Displaying Start MD when Stop MD isn't set in the previous row
+- TR#155924 (section 8152): Displaying Start MD when Stop MD is set in the previous row
+- TR#155842 (section 8152): Displaying and saving in m-project
+- TR#155843 (section 8152): Displaying and saving in ft-project
+- TR#155844 (section 8152): Displaying and saving in ft-m project
+- TR#155925 (section 8152): Toolcode - draft 1
+- TR#155926 (section 8152): Toolcode - draft 2
+- TR#156070 (section 8193): Displaying Magnetics in side bar in Well Trajectory
+- TR#156071 (section 8193): Enabled inputs Magnetics in side bar in Well Trajectory
+- TR#156072 (section 8193): Disabled inputs Magnetics in side bar in Well Trajectory
+- TR#156073 (section 8193): Displaying inputs Magnetics in side bar in Well Trajectory
+- TR#156074 (section 8193): Validation of Sample Date input
+- TR#156078 (section 8193): Selecting a date in the calendar Sample Date
+- TR#156080 (section 8193): Select a date range in the calendar Sample Date
+- TR#183719 (section 8193): Clear the date in the Sample date
+- TR#156076 (section 8193): Model Name is enabled
+- TR#156081 (section 8193): Selecting a non-default model in Model Name
+- TR#183721 (section 8193): Validating default Model Name with earliest date in Sample date
+- TR#183720 (section 8193): Validating Model Name for model IGRF14
+- TR#183725 (section 8193): Error validation of Model Name for model IGRF14
+- TR#183722 (section 8193): Validating Model Name for model WMM2020
+- TR#183726 (section 8193): Error validation of Model Name for model WMM2020
+- TR#183729 (section 8193): Error validation of Model Name for model WMM2020 out of rangefrom 1/1/2020 to 31/12/2024
+- TR#183723 (section 8193): Validating Model Name for model WMM2025
+- TR#183730 (section 8193): Error validation of Model Name for model WMM2025 until 31/12/2024
+- TR#183724 (section 8193): Validating Model Name for model WMMHR2025
+- TR#183731 (section 8193): Error validation of Model Name for model WMMHR2025 until  31/12/2024
+- TR#156082 (section 8193): Validation of Field Strength input
+- TR#156085 (section 8193): Error validation of Field Strength input > 100,000
+- TR#269714 (section 8193): Error validation of Field Strength input < 0
+- TR#156083 (section 8193): Validation of Dip Angle input
+- TR#170724 (section 8193): Error validation of Dip Angle input
+- TR#156084 (section 8193): Validation of Declination input
+- TR#170728 (section 8193): Error validation of Declination input
+- TR#154649 (section 8038): Displaying Location Uncertainly in side bar in Well Trajectory for meter project
+- TR#269706 (section 8038): Displaying Location Uncertainly in side bar in Well Trajectory for feet project
+- TR#269707 (section 8038): Displaying Location Uncertainly in side bar in Well Trajectory for feet-meter project
+- TR#154650 (section 8038): Valid values Vertical in Location Uncertainly in side bar in Well Trajectory
+- TR#269708 (section 8038): Valid characters Vertical in Location Uncertainly in side bar in Well Trajectory
+- TR#170738 (section 8038): Error validation of Vertical input > 100,000
+- TR#269709 (section 8038): Error validation of Vertical input < 0
+- TR#269712 (section 8038): Valid values Horizontal in Location Uncertainly in side bar in Well Trajectory
+- TR#269713 (section 8038): Valid characters Horizontal in Location Uncertainly in side bar in Well Trajectory
+- TR#269710 (section 8038): Error validation of Horizontal input > 100,000
+- TR#269711 (section 8038): Error validation of Horizontal input < 0
+- TR#269699 (section 7816): Displaying Depth Reference  in side bar in Well Trajectory for meter project
+- TR#153797 (section 7816): Displaying Depth Reference  in side bar in Well Trajectory for feet project
+- TR#269701 (section 7816): Displaying Depth Reference  in side bar in Well Trajectory for meter-feet project
+- TR#153814 (section 7816): Valid values for the KB Elevation in Type - Land in Depth Reference in side bar in Well Trajectory
+- TR#269702 (section 7816): Valid characters for the KB Elevation in Type - Land in Depth Reference in side bar in Well Trajectory
+- TR#170744 (section 7816): Error validation of KB elevation input (Land)
+- TR#153815 (section 7816): Valid values KB Elevation in Type - Offshore in Depth Reference in side bar in Well Trajectory
+- TR#269703 (section 7816): Valid characters KB Elevation in Type - Offshore in Depth Reference in side bar in Well Trajectory
+- TR#170746 (section 7816): Error validation of KB elevation input (Offshore)
+- TR#153816 (section 7816): Valid values Ground Level in Type - Land in Depth Reference in side bar in Well Trajectory
+- TR#269704 (section 7816): Valid characters Ground Level in Type - Land in Depth Reference in side bar in Well Trajectory
+- TR#170747 (section 7816): Error validation of Ground Level input
+- TR#153817 (section 7816): Valid values Water Depth in Type - Offshore in Depth Reference in side bar in Well Trajectory
+- TR#269705 (section 7816): Valid characters Water Depth in Type - Offshore in Depth Reference in side bar in Well Trajectory
+- TR#170748 (section 7816): Error validation of Water Depth input
+- TR#153810 (section 7816): Changing Type - Land on Offshore of Depth Reference  in side bar in Well Trajectory
+- TR#153811 (section 7816): Changing Type  Offshore on  Land of Depth Reference  in side bar in Well Trajectory
+- TR#153812 (section 7816): Displaying Air Gap in Type - Land of Depth Reference  in side bar in Well Trajectory
+- TR#170749 (section 7816): Error validation of Air Gap input (Land)
+- TR#153813 (section 7816): Displaying Air Gap in Type - Offshore of Depth Reference  in side bar in Well Trajectory
+- TR#171187 (section 7816): Error validation of Air Gap input (Offshore)
+- TR#183595 (section 7796): Displaying a notice board about the absence of a coordinate system
+- TR#183605 (section 7796): No display of the plate with notification about the absence of a coordinate system
+- TR#183606 (section 7796): Empty and disabled input in Magnetics section when selecting model name IGRF14 with project coordinate system validation error
+- TR#183608 (section 7796): Empty and disabled input in Magnetics section when selecting model name WMM2020  with project coordinate system validation error
+- TR#183609 (section 7796): Empty and disabled input in Magnetics section when selecting model name WMM2025 with project coordinate system validation error
+- TR#183610 (section 7796): Empty and disabled input in Magnetics section when selecting model name WMMHR2025 with project coordinate system validation error
+- TR#183607 (section 7796): Project coordinate system validation errors do not affect the disabling of inputs in the sidebar
+- TR#153428 (section 7796): Displaying Surface Location in side bar in Well Trajectory
+- TR#153429 (section 7796): Enabled inputs  Surface Location in side bar in Well Trajectory
+- TR#153761 (section 7796): Disabled inputs  Surface Location in side bar in Well Trajectory
+- TR#153772 (section 7796): Displaying  inputs of Surface Location in side bar in Well Trajectory
+- TR#153762 (section 7796): Validation input Xsrf  in Surface Location in side bar in Well Trajectory
+- TR#170740 (section 7796): Error validation of Xsrf input
+- TR#170730 (section 7796): Values of Xsrf ​​are sent to the back in unconverted units (ft project)
+- TR#170731 (section 7796): Values of Xsrf ​​are sent to the back in unconverted units (m project)
+- TR#170732 (section 7796): Values of Xsrf ​​are sent to the back in unconverted units (ft-m project)
+- TR#153764 (section 7796): Validation input Ysrf  in Surface Location in side bar in Well Trajectory
+- TR#170741 (section 7796): Error validation of Ysrf input
+- TR#170733 (section 7796): Values of Ysrf ​​are sent to the back in unconverted units (ft project)
+- TR#170734 (section 7796): Values of Ysrf ​​are sent to the back in unconverted units (m project)
+- TR#170735 (section 7796): Values of Ysrf ​​are sent to the back in unconverted units (ft-m project)
+- TR#153766 (section 7796): Validation input Grid Convergence in Surface Location in side bar in Well Trajectory
+- TR#170742 (section 7796): Error validation of Grid Convergence input
+- TR#173273 (section 7796): Negative value of the Grid Convergence (GC) angle in SS is equal to the GC value in DS
+- TR#153768 (section 7796): Validation input Azimuth VS (GN) in Surface Location in side bar in Well Trajectory
+- TR#170743 (section 7796): Error validation of Azimuth VS (GN) input
+- TR#153771 (section 7796): Dependence of AZIM TN on values Grid Convergence in Surface Location in side bar in Well Trajectory
+- TR#156086 (section 25188): Default view for Well block in sidebar
+- TR#144716 (section 25188): Name field displaying
+- TR#144715 (section 25188): Clearing Name field  in Well block
+- TR#144717 (section 25188): Name field min value
+- TR#144718 (section 25188): Name field max value
+- TR#156087 (section 25188): Changing Well Name in SS
+- TR#156088 (section 25188): Changing Well Name in DS
+- TR#156089 (section 25188): Changing Well Name in Trajectory tab
+- TR#156090 (section 25188): API field displaying
+- TR#156091 (section 25188): API field min value
+- TR#156092 (section 25188): API field max value
+- TR#156093 (section 25188): Changing API via SS
+- TR#156094 (section 25188): Changing API via Well Trajectory
+- TR#156095 (section 25188): Operator field displaying
+- TR#156096 (section 25188): Operator field min value
+- TR#156097 (section 25188): Operator field max value
+- TR#156098 (section 25188): Changing Operator via SS
+- TR#156099 (section 25188): Changing Operator via Well Trajectory
+- TR#143447 (section 6754): Table Name Display
+- TR#144712 (section 6754): Update Table Name via tree
+- TR#144713 (section 6754): Update Table Name via table sidebar
+- TR#144714 (section 6754): Update Table Name via  Starsteer
+- TR#143448 (section 6754): Sticky first and last Columns (will update after 4.8.0.)
+- TR#143449 (section 6754): Displaying table columns
+- TR#143450 (section 6754): Column Width Behavior
+- TR#143451 (section 6754): Column header behavior in min width
+- TR#143452 (section 6754): Truncation of the value of a spreadsheet cell
+- TR#320943 (section 26024): Copy single numeric value from Excel and paste with Ctrl+V
+- TR#320944 (section 26024): Copy value from StarSteer and paste with Ctrl+V
+- TR#320945 (section 26024): Attempt to paste data into non-editable cell
+- TR#320946 (section 26024): Copy row of 3 cells and paste with Ctrl+V
+- TR#320947 (section 26024): Copy column of 5 cells and paste with Ctrl+V
+- TR#320948 (section 26024): Copy 3x3 table and paste with Ctrl+V
+- TR#320949 (section 26024): Paste data with automatic row addition
+- TR#320950 (section 26024): Add empty row using Paste Row button without buffer data
+- TR#320951 (section 26024): Add row with data using Paste Row button
+- TR#320952 (section 26024): Add multiple rows with Paste Row button
+- TR#320953 (section 26024): Paste data using action column button
+- TR#320954 (section 26024): Verify paste position independence from active cell
+- TR#320955 (section 26024): Paste multiple rows using action column button
+- TR#320956 (section 26024): Reject invalid text data in numeric fields
+- TR#320957 (section 26024): Handle mixed valid and invalid data
+- TR#320962 (section 26024): Remove header row when pasting from Excel
+- TR#320963 (section 26024): Ignore labels when pasting from StarSteer
+- TR#320964 (section 26024): Complete validation, calculation and backend save cycle
+- TR#320967 (section 26024): Test Excel compatibility with decimal separators
+- TR#320970 (section 26024): Test different decimal separators compatibility
+- TR#320971 (section 26024): Paste data into Tie-In fields
+- TR#320972 (section 26024): Validate Tie-In data during paste
+- TR#320973 (section 26024): Performance test with large dataset (100+ rows)
+- TR#320976 (section 26024): Paste data into empty table
+- TR#314526 (section 6757): Display trajectory table structure and headers
+- TR#314527 (section 6757): Display trajectory data with correct formatting
+- TR#314528 (section 6757): Add new trajectory row with auto-focus and mandatory fields highlighting
+- TR#314529 (section 6757): Edit MD field in trajectory row with valid values
+- TR#314530 (section 6757): Edit MD field with invalid sequence values
+- TR#314531 (section 6757): Edit MD field with boundary values
+- TR#314532 (section 6757): Edit MD field with values exceeding limits
+- TR#314533 (section 6757): Edit INCL field with valid values
+- TR#314534 (section 6757): Edit INCL field with boundary values
+- TR#314535 (section 6757): Edit INCL field with invalid values
+- TR#314536 (section 6757): Edit AZIM GN field when Grid Convergence equals zero
+- TR#314537 (section 6757): Edit AZIM TN field when Grid Convergence not equal to zero
+- TR#314538 (section 6757): Verify AZIM GN is read-only when Grid Convergence not equal to zero
+- TR#314539 (section 6757): Edit AZIM GN or AZIM TN fields with invalid values
+- TR#314540 (section 6757): Verify calculated fields are read-only
+- TR#314541 (section 6757): Delete single trajectory row using delete button
+- TR#314542 (section 6757): Handle incomplete mandatory fields in new row
+- TR#314543 (section 6757): Handle deletion of mandatory field from existing row
+- TR#314544 (section 6757): Verify trajectory table read-only mode for locked well
+- TR#314545 (section 6757): Verify trajectory table access control for VIEWER role
+- TR#314546 (section 6757): Verify trajectory table editing access for authorized roles
+- TR#314547 (section 6757): Verify trajectory recalculation on wellheader changes
+- TR#314548 (section 6757): Verify DLS calculation and units display
+- TR#314562 (section 6757): Trajectory table data loading from WDL
+- TR#314563 (section 6757): Real-time trajectory point modification from StarSteer
+- TR#314564 (section 6757): Real-time trajectory point addition from StarSteer
+- TR#314565 (section 6757): Real-time trajectory point deletion from StarSteer
+- TR#314566 (section 6757): Real-time trajectory import with Replace from StarSteer
+- TR#314550 (section 6757): Real-time trajectory import into empty well from StarSteer
+- TR#314551 (section 6757): Trajectory table updates with unsaved local changes
+- TR#314552 (section 6757): Trajectory table recalculation on wellheader changes from StarSteer
+- TR#314553 (section 6757): Trajectory table Grid Convergence impact from StarSteer
+- TR#314554 (section 6757): Trajectory table precision consistency after real-time updates
+- TR#314555 (section 6757): Trajectory table unit conversion after real-time updates
+- TR#314556 (section 6757): Trajectory table DLS recalculation after point changes
+- TR#287259 (section 6755): Default Tie-in row display for newly created well
+- TR#287260 (section 6755): Display Tie-in row on Well Trajectory opening
+- TR#287261 (section 6755): Edit MD field in Tie-in row with valid values
+- TR#287262 (section 6755): Edit MD field with boundary values
+- TR#287263 (section 6755): Edit MD field with invalid values
+- TR#287264 (section 6755): Edit INCL field in Tie-in row with valid values
+- TR#287265 (section 6755): Edit INCL field with boundary values
+- TR#287266 (section 6755): Edit INCL field with invalid values
+- TR#287267 (section 6755): Edit AZIM TN field when Grid Convergence not equal to 0
+- TR#287268 (section 6755): Edit AZIM TN field with boundary values
+- TR#287269 (section 6755): Edit AZIM TN field with invalid values
+- TR#287270 (section 6755): Edit AZIM GN field when Grid Convergence equals 0
+- TR#287271 (section 6755): AZIM GN calculation when Grid Convergence not equal to 0
+- TR#287272 (section 6755): Edit TVD field in Tie-in row with valid values
+- TR#287273 (section 6755): Edit TVD field with boundary values
+- TR#287274 (section 6755): Edit TVD field with invalid values
+- TR#287275 (section 6755): Edit N/S (G/N) field in Tie-in row with valid values
+- TR#287276 (section 6755): Edit N/S (G/N) field with boundary values
+- TR#287277 (section 6755): Edit E/W (G/N) field in Tie-in row with valid values
+- TR#287278 (section 6755): Edit E/W (G/N) field with boundary values
+- TR#287279 (section 6755): Verify X(G/N) and Y(G/N) calculation dependency on Xsrf and Ysrf
+- TR#287280 (section 6755): Verify TVDSS calculation dependency on KB Elevation
+- TR#287281 (section 6755): Verify tie-in row read-only mode when well is locked
+- TR#287282 (section 6755): Verify tie-in row read-only access for VIEWER role
+- TR#314567 (section 6755): Verify tie-in row edit access for elevated user roles
+- TR#314568 (section 6755): Tie-in row cannot be deleted - no delete icon displayed
+- TR#287283 (section 6755): Tie-in trajectory fields update - MD, INCL, AZIM grouping
+- TR#287284 (section 6755): Tie-in partial data update - single field modification
+- TR#287285 (section 6755): Tie-in real-time updates from StarSteer
+- TR#287286 (section 6755): Tie-in magnetic model validation with real-time sync
+- TR#287287 (section 6755): Tie-in units conversion in Field project (ft)
+- TR#385843 (section 6755): Tie-in units conversion in Metric project (m)
+- TR#385844 (section 6755): Tie-in units conversion in Field-Metric project (ft-m)
+- TR#287324 (section 6756): Display units in headers for Field project
+- TR#287325 (section 6756): Display units in headers for Metric project
+- TR#287326 (section 6756): Display units in headers for Field-Metric project
+- TR#287327 (section 6756): Display AZIM TN header when Grid Convergence not equal to 0
+- TR#287328 (section 6756): Hide AZIM TN header when Grid Convergence equals 0
+- TR#287329 (section 6756): Table headers alignment and text wrapping
+- TR#122026 (section 6281): User with role MANAGER, GEOTECH, POWER_INTERPRETER, INTERPRETER, VIEWER and SUPER SUPPORT can open Well Trajectory tab  though button in Well ribbon
+- TR#122030 (section 6281): User with role MANAGER, GEOTECH, POWER_INTERPRETER, INTERPRETER, VIEWER and SUPER SUPPORT can open Well Trajectory tab though contex menu
+- TR#122029 (section 6281): User with role MANAGER, GEOTECH, POWER_INTERPRETER, INTERPRETER, VIEWER and SUPER SUPPORT can open Well Plan Trajectory tab
+- TR#122028 (section 6281): Open tab when user has different roles for General&Virtual projects
+- TR#285654 (section 22177): No Typewells in a project
+- TR#285656 (section 22177): New private dashboard with associated well. Monitoring zone
+- TR#285657 (section 22177): Private dashboard with associated well. Analytics zone
+- TR#285658 (section 22177): Private dashboard. Context menu
+- TR#285659 (section 22177): Published dashboard. Context menu
+- TR#285660 (section 22177): Typewell Ribbon Display and Content
+- TR#285661 (section 22177): Switching between Typewells in Typewell Trajectory tab
+- TR#423970 (section 22177): Typewell Trajectory tab state is saved and restored in drillspot-settings
+- TR#285662 (section 22177): Ribbon switching from Typewell to Well
+- TR#285663 (section 22177): Ribbon switching from Typewell to WellPlan
+- TR#285664 (section 22177): Typewell Trajectory tab opens only one time
+- TR#285665 (section 22177): Opened Typewell Trajectory tab isn't displayed in Open dashboards window
+- TR#285666 (section 22177): Long Typewell Name Truncation in Ribbon
+- TR#285667 (section 22177): Multiple Typewell Projects Filter
+- TR#122017 (section 6279): Private dashboard with assosiated well. Monitoring zone
+- TR#122018 (section 6279): Private dashboard with assosiated well. Analytics zone
+- TR#122019 (section 6279): Private dashboard. Context menu
+- TR#122021 (section 6279): Published dashboard. Context menu
+- TR#122023 (section 6279): Switching between well plans in Well Plan Trajectory tab
+- TR#122024 (section 6279): Well Plan Trajectory tab opens only one time
+- TR#122025 (section 6279): Opened Well Plan Trajectory tab isn't displayed in Open dashboards window
+- TR#122000 (section 6278): No solo wells in a project
+- TR#122001 (section 6278): New private dashboard without associated well
+- TR#122002 (section 6278): New private dashboard with assosiated well. Monitoring zone
+- TR#122003 (section 6278): Existing private dashboard with assosiated well. Monitoring zone
+- TR#122005 (section 6278): Private dashboard. Context menu
+- TR#122006 (section 6278): Private dashboard. Button in the ribbon
+- TR#122007 (section 6278): Published dashboard. Context menu
+- TR#122008 (section 6278): Published dashboard. Button in the ribbon
+- TR#122009 (section 6278): Switching between wells in Well Trajectory tab
+- TR#122012 (section 6278): Well trajectory tab opens only one time
+- TR#122013 (section 6278): Opened Well trajectory tab isn't displayed in Open dashboards window (Open dashboards window is DEPRICATED)
+- TR#153424 (section 7794): Displaying data for locked wellbore on  Well Trajectory
+- TR#153426 (section 7794): Displaying data for  unlocked wellbore on  Well Trajectory
+- TR#153425 (section 7794): Displaying Wellplan's data for locked wellbore on  Well Trajectory
+- TR#153427 (section 7794): Displaying Wellplan's data for unlocked wellbore on  Well Trajectory

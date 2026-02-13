@@ -1,6 +1,8 @@
 # Этап 3 — Маппинг автотестов на TestRail
 
-Промт и технические детали. Общий процесс: [README.md](README.md).
+Общий процесс: [README.md](README.md).
+
+**На вход даётся:** название (путь) файла с описаниями автотестов — результат этапа 1; название (путь) файла с выгрузкой кейсов TestRail — результат этапа 2. Пользователь указывает оба файла.
 
 ---
 
@@ -33,16 +35,22 @@
 
 ## Инструмент маппинга
 
-Скрипт (в корне репозитория):
+Скрипт (универсальный, для любой области: trajectory, geotarget, BHA и т.д.):
 
-`scripts/geotarget_map_to_testrail.mjs`
+`modules/01-autotest-coverage/map_autotests_to_testrail.mjs`
 
-Универсальный: принимает любой `--input` (описания) и `--cases` (JSON выгрузки).
+Принимает любой `--input` (описания) и `--cases` (JSON выгрузки). Аргументы `--input` и `--cases` обязательны.
 
 Пример:
 
 ```bash
-node scripts/geotarget_map_to_testrail.mjs ^
+node modules/01-autotest-coverage/map_autotests_to_testrail.mjs --input results/01-autotest-coverage/QAA-6265_trajectory.md --cases results/01-autotest-coverage/testrail-section-6277-subtree-cases.json --out-base results/01-autotest-coverage/trajectory-section6277-testrail-mapping-12_02_25
+```
+
+С указанием своей папки/префикса:
+
+```bash
+node modules/01-autotest-coverage/map_autotests_to_testrail.mjs ^
   --input results/01-autotest-coverage/all-tests-<subset>-only.md ^
   --cases results/01-autotest-coverage/testrail-section-<SECTION_ID>-subtree-cases.json ^
   --out-base results/01-autotest-coverage/<subset>-section<SECTION_ID>-testrail-mapping-<dd_mm_yy>
@@ -153,7 +161,7 @@ node scripts/rebuild_all_tests_working_file.mjs
 
 1. Экспортировать кейсы TestRail для нужного `section_id` (Этап 2), если выгрузки ещё нет.
 2. При необходимости подготовить сабсет тестов под эту секцию (по path/ключевым словам), сохранить в `results/01-autotest-coverage/`.
-3. Запустить маппинг: `scripts/geotarget_map_to_testrail.mjs` с `--input`, `--cases`, `--out-base` в `results/01-autotest-coverage/`.
+3. Запустить маппинг: `modules/01-autotest-coverage/map_autotests_to_testrail.mjs` с `--input`, `--cases`, `--out-base` в `results/01-autotest-coverage/`.
 4. Обновить рабочий файл: запустить `scripts/rebuild_all_tests_working_file.mjs`. Сохранить сортировку по исходному номеру теста, отсутствие дублей; точечные фиксы должны перезаписывать старые результаты.
 
 **Правила сопоставления:** искать кандидатов только по выгруженным кейсам; игнорировать визуальную регрессию при скоринге; использовать принцип функционального ядра (ядро покрыто → минимум Partial; Covered только при сильном совпадении).

@@ -8,7 +8,6 @@ Spreadsheet. Common. Always auto-scroll to newly created row after clicking Add 
 * Область: Spreadsheet. Common
 * Related Jira: DS-11861 (Mud Reports. No auto-scroll to newly created report after clicking Add Report button)
 * Контекст: обсуждение с дизайнером (решение — always-scroll)
-* Attachments:
 
 *Description:*
 Сейчас в длинных спредшитах/таблицах (когда есть вертикальный скролл) после нажатия кнопки добавления строки (например, {{Add Report}}):

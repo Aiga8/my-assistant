@@ -1,6 +1,8 @@
 # Этап 2 — Экспорт кейсов из TestRail
 
-Промт и технические детали. Общий процесс: [README.md](README.md).
+Общий процесс: [README.md](README.md).
+
+**На вход даётся:** ID секции TestRail (`section_id`). Проект всегда 5.
 
 ---
 
@@ -78,14 +80,22 @@ node modules/01-autotest-coverage/testrail_export_section_subtree.mjs -p 5 -s 22
 
 ---
 
-## Prompt (краткая инструкция для запуска этапа)
+## Промт для Этапа 2 (копируй и подставь section_id)
 
-Когда нужна выгрузка кейсов для маппинга:
+```
+Входные данные:
+- Section ID: <ID корневой секции TestRail>
 
-1. Уточни у пользователя **project_id** (например, 5) и **section_id** корневой секции TestRail (виджет/область).
+Задача: Этап 2 маппинга автотестов на TestRail. Выгрузи кейсы TestRail для указанной секции и всех дочерних. Project_id = 5. Запусти скрипт modules/01-autotest-coverage/testrail_export_section_subtree.mjs с --project 5 и --root-section <SECTION_ID>, результат сохрани в results/01-autotest-coverage/. Дальше по инструкции в modules/01-autotest-coverage/02_export_testrail_section_subtree.md.
+```
+
+---
+
+## Краткая инструкция для запуска этапа
+
+1. **Входные данные:** пользователь даёт только **section_id** корневой секции TestRail. Project_id всегда **5**.
 2. Запусти экспорт:
    ```bash
-   node modules/01-autotest-coverage/testrail_export_section_subtree.mjs --project <PROJECT_ID> --root-section <SECTION_ID> --out results/01-autotest-coverage
+   node modules/01-autotest-coverage/testrail_export_section_subtree.mjs --project 5 --root-section <SECTION_ID> --out results/01-autotest-coverage
    ```
-3. Убедись, что в `results/01-autotest-coverage/` появились файлы `testrail-section-<SECTION_ID>-subtree-cases.json` и `.md`.
-4. Эти файлы — вход для Этапа 3 (маппинг автотестов на TestRail).
+3. Результат: в `results/01-autotest-coverage/` появятся `testrail-section-<SECTION_ID>-subtree-cases.json` и `.md` — они нужны для Этапа 3.
