@@ -8,19 +8,33 @@
 
 Иначе после сохранения кейс окажется в Design и придётся править статус отдельно.
 
-## TestRail → перевести кейс в Ready_to_automate
+## TestRail → перевести кейс в Review и назначить на исполнителя
 
 Промпт:
 
 ```
-Проставь в TestRail для кейса <CASE_ID> следующие значения полей:
-Assigned To → Me → case_assignedto_id: 61
-Automation → Ready_to_automate → custom_automation: 6
-Automation Type → TypeScript → custom_automation_type: 5
-Custom comment → custom_comments: "Autotest: tests/<specPath>::<testName> [<CASE_ID>]" (просто текст, без HTML; specPath — путь к .spec.ts без префикса tests/)
-
-Сделай это в одну итерацию: вытащи строку теста из файла и сразу обнови кейс в TestRail.
+В TestRail для кейса <CASE_ID> проставь через MCP (update_case_fields):
+Status → Review → case_status_id: 3
+Assigned To → case_assignedto_id: <ID> (ID исполнителя взять из testrail-field-ids.md, секция "Assigned To")
 ```
+
+Исполнитель может меняться; его `case_assignedto_id` смотри в testrail-field-ids.md.
+
+
+## TestRail → сменить тип на Regression (только кейсы со статусом Ready)
+
+**Суть:** у всех кейсов указанной секции со статусом **Ready** выставить тип **Regression**. В той же операции передавать `case_status_id: 1`, чтобы статус не сбросился в Design (см. нюанс выше).
+
+Промпт:
+
+```
+В TestRail для секции <SECTION_ID> (project_id: 5) у всех кейсов со статусом Ready (case_status_id: 1) смени тип на Regression (type_id: 9). При обновлении в том же вызове передавай case_status_id: 1, чтобы статус остался Ready.
+
+Используй MCP TestRail: get_cases(project_id: 5, section_id: <SECTION_ID>), отфильтруй кейсы с case_status_id === 1, затем update_cases с полями: type_id: 9, case_status_id: 1. ID типа и статуса — из testrail-field-ids.md (Regression = 9, Ready = 1).
+```
+
+Можно перечислить несколько секций: «сделай то же для секций 15509, 20406, 20408» — тогда выполнить по очереди для каждой.
+
 
 ## TestRail → перевести кейс в Automated
 

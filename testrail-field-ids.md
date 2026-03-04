@@ -32,7 +32,7 @@
 | ID | Статус (как в TestRail) |
 |---:|---|
 | 1 | Ready |
-| 2 | (уточнить) |
+| 2 | Design |
 | 3 | Review |
 
 ---
@@ -43,7 +43,7 @@
 |---:|---|
 | null | None (не назначено / поле пустое) |
 | 54 | Aleksandra Minikh |
-| 59 | (уточнить) |
+| 59 | Tatsiana Paferava |
 | 61 | Me |
 
 ---

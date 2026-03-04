@@ -1,0 +1,233 @@
+# TestRail export: project 5, section subtree 30048
+
+Generated: 2026-02-19T11:01:58.639Z
+
+- Root section: 30048 — EDM from COMPASS
+- Sections in subtree: 12
+- Cases exported: 208
+
+## Sections
+
+- 30048: EDM from COMPASS
+- 32316: Import Scenarios
+- 32151: Import Cancellation
+- 32150: Import Results
+- 32149: Import Execution
+- 32148: Well Plans Filtering
+- 32147: Auto-matching
+- 32099: Well Assignment
+- 32098: Object Selection
+- 30473: Preview Display
+- 30353: File Upload
+- 30049: Context Menu Access
+
+## Cases
+
+- TR#381469 (section 32316): Import well (Create new) to imperial project
+- TR#381470 (section 32316): Import well (Create new) to metric project
+- TR#381471 (section 32316): Import well (Create new) to field-metric project
+- TR#381472 (section 32316): Import well (Overwrite) to imperial project
+- TR#381473 (section 32316): Import well (Overwrite) to metric project
+- TR#381474 (section 32316): Import well (Overwrite) to field-metric project
+- TR#381481 (section 32316): Import well (Overwrite) - attribute preserved when both Solo and EDM have no data
+- TR#381475 (section 32316): Import multi-wellbore well - verify parent KO_MD inheritance
+- TR#381482 (section 32316): Import well (Overwrite) - attribute updated from EDM when Solo has data
+- TR#381483 (section 32316): Import well (Overwrite) - attribute preserved when EDM has no data
+- TR#381484 (section 32316): Import well (Overwrite) - attribute populated from EDM when Solo has no data
+- TR#381476 (section 32316): Import wellbore - verify KB Elevation selection with IS_DEFAULT priority
+- TR#381477 (section 32316): Import wellbore - verify KB Elevation selection by latest date
+- TR#381478 (section 32316): Import well (Create new) with WellPlans
+- TR#381479 (section 32316): Import WellPlans to existing well without WellPlans
+- TR#381480 (section 32316): Import WellPlans to existing well with WellPlans - verify new WellPlans created
+- TR#364399 (section 32151): Cancel button availability during file upload
+- TR#364400 (section 32151): Close (X) button availability during file upload
+- TR#364401 (section 32151): Cancel file upload in UPLOADING state
+- TR#364402 (section 32151): Close (X) button cancels upload in UPLOADING state
+- TR#364403 (section 32151): Cancel button availability during file processing
+- TR#364404 (section 32151): Cancel file processing in UPLOADED state
+- TR#364405 (section 32151): Close (X) button cancels processing in UPLOADED state
+- TR#364406 (section 32151): Cancel button disabled during import execution
+- TR#364407 (section 32151): Close (X) button disabled during import execution
+- TR#364408 (section 32151): Cancel button not displayed on results screen
+- TR#381415 (section 32151): Close button displayed on results screen
+- TR#364409 (section 32151): Close (X) button does not cancel completed import
+- TR#364410 (section 32151): Cancel large file upload
+- TR#364411 (section 32151): Multiple rapid Cancel button clicks
+- TR#364412 (section 32151): Cancel and immediate retry with same file
+- TR#364413 (section 32151): Cancel on upload error screen
+- TR#364375 (section 32150): Import results modal displays with correct structure after import completion
+- TR#364376 (section 32150): Import Status column displays for all objects in hierarchy
+- TR#364377 (section 32150): Imported status displays with green badge for successful objects
+- TR#364378 (section 32150): Failed status displays with red badge for objects with errors
+- TR#364379 (section 32150): Error messages display in red status badge with correct formatting
+- TR#364380 (section 32150): Overwrite Solo Well column displays static text instead of dropdowns
+- TR#364381 (section 32150): Create new text does not display after successful import
+- TR#364382 (section 32150): Mapped Solo well name displays for objects mapped to existing wells (overwrite)
+- TR#364384 (section 32150): WellPlan objects display Create new in Overwrite column after import
+- TR#364417 (section 32150): Starred wellplan imports as starred
+- TR#364418 (section 32150): Regular wellplan imports as regular
+- TR#364385 (section 32150): Summary banner displays with detailed statistics for successful import
+- TR#364386 (section 32150): Summary banner displays with errors count for partially successful import
+- TR#364387 (section 32150): Summary banner displays red for completely failed import
+- TR#364389 (section 32150): All checkboxes hidden in read-only results view
+- TR#364390 (section 32150): Import and Cancel buttons absent in results interface
+- TR#364392 (section 32150): Chevrons for expand/collapse continue working in results view
+- TR#364393 (section 32150): Scrolling works correctly with large number of objects in results
+- TR#364394 (section 32150): Modal height adapts to content appropriately
+- TR#364395 (section 32150): Close button closes modal and refreshes Solo wells list
+- TR#381414 (section 32149): Import button enters UI importing state
+- TR#363839 (section 32149): POST request sent after Import button clicked
+- TR#363831 (section 32149): POST request uses import_uuid from file upload
+- TR#363832 (section 32149): Polling interval is 3 seconds
+- TR#363833 (section 32149): Polling stops when IMPORTED status received
+- TR#363834 (section 32149): Polling stops when FAILED status received
+- TR#363835 (section 32149): Modal enters Read Only mode after Import clicked
+- TR#363836 (section 32149): Import with only Trajectories (no WellPlans selected)
+- TR#363837 (section 32149): Import with only WellPlans (Trajectory deselected)
+- TR#363838 (section 32149): Import with large number of objects (>50)
+- TR#363736 (section 32148): Filter buttons display in preview mode
+- TR#363738 (section 32148): Filter regular Well Plans - disable and re-enable
+- TR#363740 (section 32148): Filter starred Well Plans - disable and re-enable
+- TR#363742 (section 32148): Auto-enable Starred Well Plans when enabling Well Plans
+- TR#363760 (section 32148): Enable only Starred Well Plans without Well Plans
+- TR#363746 (section 32148): Both filters disabled - only trajectories visible
+- TR#363750 (section 32148): Parent wellbore checkbox updates when children hidden
+- TR#363791 (section 32148): Parent wellbore checkbox updates when starred children hidden
+- TR#363751 (section 32148): Parent checkbox selects only visible children
+- TR#363792 (section 32148): Parent checkbox selects only visible starred children
+- TR#363752 (section 32148): Header checkbox applies to visible objects only
+- TR#363753 (section 32148): Filter state persists during collapse/expand
+- TR#363755 (section 32148): Filter state resets between imports
+- TR#381412 (section 32148): Import with filtered regular Well Plans - only starred plans imported
+- TR#381413 (section 32148): Import with filtered starred Well Plans - only regular plans imported
+- TR#363810 (section 32148): Import with both filters disabled - only trajectories imported
+- TR#363811 (section 32148): Import with all filters enabled - all objects imported
+- TR#363737 (section 32148): Filter buttons not displayed outside preview mode
+- TR#363702 (section 32147): Auto-match single-wellbore well with exact Name and API (Priority 1)
+- TR#363703 (section 32147): No auto-match Priority 1 when Name matches but API differs
+- TR#363704 (section 32147): Auto-match Priority 1 when Name maches and both API are null
+- TR#363705 (section 32147): No auto-match Priority 1 when EDM has null API but Solo has API value
+- TR#363706 (section 32147): No auto-match Priority 1 when Solo has null API but EDM has API value
+- TR#363707 (section 32147): Auto-match with case-insensitive Name (Priority 2)
+- TR#363708 (section 32147): Auto-match with case-insensitive API (Priority 2)
+- TR#363709 (section 32147): Auto-match with normalized Name containing special characters (Priority 3)
+- TR#363710 (section 32147): Auto-match with multiple consecutive special characters (Priority 3)
+- TR#363711 (section 32147): Auto-match by API only when Names differ - exact API (Priority 4)
+- TR#363712 (section 32147): Auto-match by API only when Names differ - normalized API (Priority 4)
+- TR#363713 (section 32147): No auto-match Priority 4 when both API are null
+- TR#363714 (section 32147): No auto-match Priority 4 when API not-null in Solo only
+- TR#363717 (section 32147): Auto-match multi-wellbore with composite Name across all priorities
+- TR#363718 (section 32147): Different Wellbores of same EDM well can match different Solo wells
+- TR#363720 (section 32147): Display auto-matched and non-matched wells in preview
+- TR#363721 (section 32147): WellPlan always shows Create new regardless of auto-matching
+- TR#363722 (section 32147): Locked Solo wells excluded from auto-matching algorithm
+- TR#363723 (section 32147): Already matched Solo wells marked with checkmark in dropdown
+- TR#363724 (section 32147): Re-import triggers fresh auto-matching process
+- TR#363725 (section 32147): Priority hierarchy: Priority 1 takes precedence over all lower priorities
+- TR#363726 (section 32147): Priority hierarchy: Priority 2 and 3 precedence over Priority 4
+- TR#363727 (section 32147): Complex scenario: mixed priorities with multiple EDM wells
+- TR#363728 (section 32147): Multiple exact Priority 1 matches - alphabetical selection
+- TR#363729 (section 32147): Sequential processing with one-to-one matching constraint
+- TR#363734 (section 32147): Auto-matching prioritizes exact match over sequence order
+- TR#363207 (section 32099): Display of Overwrite Solo Well column in modal
+- TR#363208 (section 32099): Default placeholder 'Create new' for all Wells
+- TR#363209 (section 32099): Open dropdown with search field on Well level
+- TR#363210 (section 32099): Search functionality - case insensitive filtering
+- TR#363211 (section 32099): Search field clear button functionality
+- TR#363212 (section 32099): No results message for invalid search query
+- TR#363213 (section 32099): Keyboard navigation in dropdown list
+- TR#363214 (section 32099): Close dropdown on outside click
+- TR#363215 (section 32099): Locked wells display with lock icon
+- TR#363216 (section 32099): Locked wells are not selectable
+- TR#363217 (section 32099): Select available well from dropdown
+- TR#363218 (section 32099): Display Overwrite label for Trajectory after parent well assignment
+- TR#363219 (section 32099): Reset well assignment with X button
+- TR#363220 (section 32099): Change manually assigned well to different well
+- TR#363221 (section 32099): Current selection indicator in opened dropdown
+- TR#363222 (section 32099): Already used wells marked with checkmark
+- TR#363223 (section 32099): Reassign used well to another Well/Wellbore
+- TR#363224 (section 32099): WellPlans always show Create new placeholder
+- TR#363232 (section 32099): Handle Wells with identical names
+- TR#363233 (section 32099): Handle project with no wells
+- TR#363234 (section 32099): Handle wells with very long names in dropdown
+- TR#363235 (section 32099): Handle wells with Unicode special characters
+- TR#363107 (section 32098): Checkboxes displayed for all objects in tree
+- TR#363108 (section 32098): No objects selected by default on import modal open
+- TR#363109 (section 32098): Error displayed when importing without selected objects
+- TR#363110 (section 32098): Checkbox state changes on click
+- TR#363111 (section 32098): Parent checkbox selects all child objects
+- TR#363112 (section 32098): Parent checkbox deselects all child objects
+- TR#363113 (section 32098): Selecting all children auto-selects parent
+- TR#363114 (section 32098): Deselecting one child changes parent to indeterminate
+- TR#363115 (section 32098): Partial child selection shows indeterminate parent
+- TR#363116 (section 32098): Trajectory auto-selected when WellPlan selected in unselected Wellbore
+- TR#363117 (section 32098): Trajectory remains selected when WellPlan selected in selected Wellbore
+- TR#363118 (section 32098): Parent auto-deselected when trajectory and all WellPlans deselected
+- TR#363119 (section 32098): Trajectory auto-select affects only same Wellbore in multi-wellbore well
+- TR#363120 (section 32098): WellPlan can be selected without trajectory when Solo well assigned
+- TR#363121 (section 32098): WellPlan selection without trajectory requires Solo well assignment
+- TR#363122 (section 32098): Overwrite assignment shown for trajectory in WellPlan-only scenario
+- TR#363125 (section 32098): Master checkbox state reflects overall selection - empty state
+- TR#363123 (section 32098): Master checkbox in header selects all available objects
+- TR#363124 (section 32098): Master checkbox deselects objects without Solo well assignment
+- TR#363126 (section 32098): Master checkbox state reflects overall selection - partial state
+- TR#363127 (section 32098): Master checkbox state reflects overall selection - checked state
+- TR#363131 (section 32098): Selection state preserved during tree collapse and expand
+- TR#363132 (section 32098): File without WellPlans handled correctly
+- TR#363133 (section 32098): File without trajectories handled correctly
+- TR#363134 (section 32098): Single wellbore well selection works correctly
+- TR#363135 (section 32098): Multi-wellbore well selection works correctly
+- TR#363167 (section 32098): Trajectory auto-selected when unselected and Solo well reassigned to Create new
+- TR#363168 (section 32098): Selection state preserved when Solo well assignment changed between wells
+- TR#363033 (section 30473): Preview displays after successful upload with hierarchical tree
+- TR#363034 (section 30473): Single-wellbore well displays as one entry
+- TR#363035 (section 30473): Multi-wellbore wells display as separate entries
+- TR#363036 (section 30473): Trajectory displays with correct icon and label
+- TR#363065 (section 30473): Starred WellPlan displays with correct icon and label
+- TR#363066 (section 30473): WellPlan displays with correct icon and label
+- TR#363038 (section 30473): Objects display in correct order
+- TR#363070 (section 30473): File with one well without WellPlans displays correctly
+- TR#363071 (section 30473): File with one well with one WellPlan without trajectory displays correctly
+- TR#364416 (section 30473): Multi-wellbore well displays wellbores sequentially in source file order
+- TR#363042 (section 30473): Chevron collapses and expands child elements
+- TR#363069 (section 30473): Scrolling works smoothly with large dataset
+- TR#363047 (section 30473): Tooltip displays on hover over object
+- TR#363067 (section 30473): Overwrite Solo Well column displays assignment states
+- TR#363068 (section 30473): Long names truncated correctly in both columns
+- TR#363052 (section 30473): Import button displays in modal footer
+- TR#363053 (section 30473): Cancel button displays next to Import
+- TR#363054 (section 30473): Cancel button always active and closes modal
+- TR#363058 (section 30473): Close button X closes modal
+- TR#363059 (section 30473): Modal does not close on backdrop click
+- TR#363060 (section 30473): Modal does not close on Escape key
+- TR#353584 (section 30353): Direct system dialog opening from context menu
+- TR#353585 (section 30353): Cancel system dialog closes without action
+- TR#353586 (section 30353): Valid XML file selection opens modal with upload
+- TR#353587 (section 30353): Successful upload transitions to preview
+- TR#353588 (section 30353): Uppercase XML extension accepted
+- TR#353589 (section 30353): Invalid file format rejected with error
+- TR#353592 (section 30353): Large file upload with boundary value (1GB)
+- TR#353593 (section 30353): Upload cancellation via Cancel button
+- TR#353594 (section 30353): Close button (X) cancels upload
+- TR#353595 (section 30353): Corrupted XML file rejected
+- TR#353596 (section 30353): Try again button restarts upload
+- TR#353597 (section 30353): Cancel button on error closes modal
+- TR#353598 (section 30353): New file selection after error works
+- TR#353599 (section 30353): Modal state reset on close
+- TR#353600 (section 30353): Temporary input element DOM manipulation
+- TR#353601 (section 30353): Drag and drop XML file into DrillSpot workspace with visual indication
+- TR#353602 (section 30353): Dropzone ignores invalid file formats and non-file objects
+- TR#353590 (section 30353): Multiple files - first valid XML accepted
+- TR#353604 (section 30353): Existing drag-and-drop functionality preserved
+- TR#353605 (section 30353): Dropzone area restrictions and limitations
+- TR#353607 (section 30353): Dropzone respects user permissions
+- TR#363700 (section 30353): File over 1GB dropped shows size error
+- TR#363701 (section 30353): Corrupted XML file dropped shows corruption error
+- TR#353615 (section 30049): Context menu displays with Import submenu
+- TR#353616 (section 30049): Context menu available in project without wells
+- TR#353617 (section 30049): EDM Import active with sufficient permissions in GP and VP
+- TR#353618 (section 30049): EDM Import disabled for VIEWER in GP, active in VP with sufficient rights
+- TR#353619 (section 30049): EDM Import disabled for VIEWER in both GP and VP
+- TR#353620 (section 30049): Context menu closes on click outside
+- TR#353621 (section 30049): Import submenu hides when hovering other menu items
+- TR#353622 (section 30049): Context menu UI matches design requirements
