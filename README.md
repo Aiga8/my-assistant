@@ -191,4 +191,5 @@ LLM **не исполняет команду “сам по себе”** — о
 - `modules/08-demo-plan/README.md` — план демо / сценарий демо по заметкам
 - `modules/09-test-updates-from-features-bugs/README.md` — обновление тестов TestRail на основе новой фичи или бага (Jira + секция TestRail)
 - `modules/10-review-feedback-fixes/README.md` — исправление замечаний по итогам ревью тестов в TestRail (кейсы в Design, замечания в комментариях)
-- `modules/11-data-testid-tasks/README.md` — Jira-задачи на добавление data-testid: по файлу локаторов (ссылка от пользователя) проход по локаторам без data-testid → создание задачи с шаблоном
+- `modules/11-jira-data-testid-tasks/README.md` — Jira-задачи на добавление data-testid: по файлу локаторов (ссылка от пользователя) проход по локаторам без data-testid → создание задачи с шаблоном
+- `modules/12-jira-autotest-tasks/README.md` — создание Jira-задач на написание автотестов (линковка TestRail ↔ автотесты, критерии приёмки по образцу QAA-6346)

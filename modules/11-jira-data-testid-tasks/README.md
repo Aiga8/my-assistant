@@ -3,7 +3,7 @@
 ## Быстрый старт (копипаст)
 
 ```
-Открой и следуй: modules/11-data-testid-tasks/README.md
+Открой и следуй: modules/11-jira-data-testid-tasks/README.md
 
 Файл с локаторами: <ссылка на файл>
 Создай Jira-задачу на data-testid по локаторам без data-testid из этого файла.
