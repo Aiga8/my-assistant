@@ -1,0 +1,506 @@
+[
+  {
+    "section_id": 7796,
+    "title": "Clear Xsrf with \"X\" icon",
+    "custom_preconds": "Открыт *Well trajectory* в спредшите, в сайдбаре в секции *Surface Location* поле *Xsrf* заполнено числом.",
+    "type_id": 9,
+    "priority_id": 3,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81],
+    "custom_fix_versions": [49, 77],
+    "refs": "DS-7784,DS-12488",
+    "custom_steps_separated": [
+      {
+        "content": "Нажать кнопку «X» (очистка) в поле *Xsrf*",
+        "expected": "- Поле *Xsrf* отображается пустым\n- В *Network* в теле PATCH в `data` передаётся: `\"xsrf\": { \"undefined\": true }`"
+      }
+    ]
+  },
+  {
+    "section_id": 7796,
+    "title": "Clear Ysrf with \"X\" icon",
+    "custom_preconds": "Открыт *Well trajectory* в спредшите, в сайдбаре в секции *Surface Location* поле *Ysrf* заполнено числом.",
+    "type_id": 9,
+    "priority_id": 3,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81],
+    "custom_fix_versions": [49, 77],
+    "refs": "DS-7784,DS-12488",
+    "custom_steps_separated": [
+      {
+        "content": "Нажать кнопку «X» (очистка) в поле *Ysrf*",
+        "expected": "- Поле *Ysrf* отображается пустым\n- В *Network* в теле PATCH в `data` передаётся: `\"ysrf\": { \"undefined\": true }`"
+      }
+    ]
+  },
+  {
+    "section_id": 7796,
+    "title": "Clear Xsrf with Backspace",
+    "custom_preconds": "Открыт *Well trajectory*, в секции *Surface Location* поле *Xsrf* заполнено.",
+    "type_id": 9,
+    "priority_id": 3,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81],
+    "custom_fix_versions": [49, 77],
+    "refs": "DS-7784,DS-12549",
+    "custom_steps_separated": [
+      {
+        "content": "Удалить значение в *Xsrf* клавишами Backspace/Delete до пустой строки, увести фокус (Tab или клик вне поля).",
+        "expected": "- Поле остаётся пустым\n- В теле PATCH в `data` передаётся: `\"xsrf\": { \"undefined\": true }`"
+      }
+    ]
+  },
+  {
+    "section_id": 7796,
+    "title": "Clear Ysrf with Backspace",
+    "custom_preconds": "Открыт *Well trajectory*, в секции *Surface Location* поле *Ysrf* заполнено.",
+    "type_id": 9,
+    "priority_id": 3,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81],
+    "custom_fix_versions": [49, 77],
+    "refs": "DS-7784,DS-12549",
+    "custom_steps_separated": [
+      {
+        "content": "Удалить значение в *Ysrf* клавишами Backspace/Delete до пустой строки, увести фокус (Tab или клик вне поля).",
+        "expected": "- Поле остаётся пустым\n- В теле PATCH в `data` передаётся: `\"ysrf\": { \"undefined\": true }`"
+      }
+    ]
+  },
+  {
+    "section_id": 7796,
+    "title": "Clear Grid Convergence with \"X\" icon",
+    "custom_preconds": "Открыт *Well trajectory*, в секции *Surface Location* поле *Grid Convergence* заполнено числом.",
+    "type_id": 9,
+    "priority_id": 3,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81],
+    "custom_fix_versions": [49, 77],
+    "refs": "DS-7784,DS-12488",
+    "custom_steps_separated": [
+      {
+        "content": "Нажать кнопку «X» в поле *Grid Convergence*",
+        "expected": "- Поле отображает **0**\n- В теле PATCH в `data` для Grid Convergence передаётся число **0**"
+      }
+    ]
+  },
+  {
+    "section_id": 7796,
+    "title": "Clear Azimuth VS (GN) with \"X\" icon",
+    "custom_preconds": "Открыт *Well trajectory*, в секции *Surface Location* поле *Azimuth VS (GN)* заполнено числом.",
+    "type_id": 9,
+    "priority_id": 3,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81],
+    "custom_fix_versions": [49, 77],
+    "refs": "DS-7784,DS-12488",
+    "custom_steps_separated": [
+      {
+        "content": "Нажать кнопку «X» в поле *Azimuth VS (GN)*",
+        "expected": "- Поле отображает **0**\n- В теле PATCH в `data` для Azimuth VS (GN) передаётся число **0**"
+      }
+    ]
+  },
+  {
+    "section_id": 7796,
+    "title": "Clear Grid Convergence with Backspace",
+    "custom_preconds": "Открыт *Well trajectory*, в секции *Surface Location* поле *Grid Convergence* заполнено (в т.ч. может быть 0).",
+    "type_id": 9,
+    "priority_id": 3,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81],
+    "custom_fix_versions": [49, 77],
+    "refs": "DS-7784,DS-12549",
+    "custom_steps_separated": [
+      {
+        "content": "Стереть значение в *Grid Convergence* клавиатурой до пустой строки и увести фокус (Tab или клик вне поля).",
+        "expected": "- Поле возвращается к отображению **0**\n- В теле PATCH в `data` для Grid Convergence передаётся число **0**"
+      }
+    ]
+  },
+  {
+    "section_id": 7796,
+    "title": "Clear Azimuth VS (GN) with Backspace",
+    "custom_preconds": "Открыт *Well trajectory*, в секции *Surface Location* поле *Azimuth VS (GN)* заполнено.",
+    "type_id": 9,
+    "priority_id": 3,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81],
+    "custom_fix_versions": [49, 77],
+    "refs": "DS-7784,DS-12549",
+    "custom_steps_separated": [
+      {
+        "content": "Стереть значение в *Azimuth VS (GN)* клавиатурой до пустой строки и увести фокус (Tab или клик вне поля).",
+        "expected": "- Поле возвращается к отображению **0**\n- В теле PATCH в `data` для Azimuth VS (GN) передаётся число **0**"
+      }
+    ]
+  },
+  {
+    "section_id": 7816,
+    "title": "Clear KB Elevation with \"X\" icon",
+    "custom_preconds": "Открыт *Well trajectory*, в секции *Depth Reference* поле *KB Elevation* заполнено числом.",
+    "type_id": 9,
+    "priority_id": 3,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81],
+    "custom_fix_versions": [49, 77],
+    "refs": "DS-7785,DS-12488",
+    "custom_steps_separated": [
+      {
+        "content": "Нажать кнопку «X» в поле *KB Elevation*",
+        "expected": "- Поле отображает **0**\n- В теле PATCH в `data` для KB Elevation передаётся число **0**"
+      }
+    ]
+  },
+  {
+    "section_id": 7816,
+    "title": "Clear KB Elevation with Backspace",
+    "custom_preconds": "Открыт *Well trajectory*, в секции *Depth Reference* поле *KB Elevation* заполнено.",
+    "type_id": 9,
+    "priority_id": 3,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81],
+    "custom_fix_versions": [49, 77],
+    "refs": "DS-7785,DS-12549",
+    "custom_steps_separated": [
+      {
+        "content": "Стереть значение в *KB Elevation* клавиатурой до пустой строки и увести фокус (Tab или клик вне поля).",
+        "expected": "- Поле возвращается к отображению **0**\n- В теле PATCH в `data` для KB Elevation передаётся число **0**"
+      }
+    ]
+  },
+  {
+    "section_id": 7816,
+    "title": "Clear Ground Level with \"X\" icon",
+    "custom_preconds": "Открыт *Well trajectory*, в секции *Depth Reference* выбран *Type: Land*, поле *Ground Level* заполнено числом.",
+    "type_id": 9,
+    "priority_id": 3,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81],
+    "custom_fix_versions": [49, 77],
+    "refs": "DS-7785,DS-12488",
+    "custom_steps_separated": [
+      {
+        "content": "Нажать кнопку «X» в поле *Ground Level*",
+        "expected": "- Поле отображает **0**\n- В теле PATCH в `data` для Ground Level передаётся число **0**"
+      }
+    ]
+  },
+  {
+    "section_id": 7816,
+    "title": "Clear Ground Level with Backspace",
+    "custom_preconds": "Открыт *Well trajectory*, в секции *Depth Reference* выбран *Type: Land*, поле *Ground Level* заполнено.",
+    "type_id": 9,
+    "priority_id": 3,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81],
+    "custom_fix_versions": [49, 77],
+    "refs": "DS-7785,DS-12549",
+    "custom_steps_separated": [
+      {
+        "content": "Стереть значение в *Ground Level* клавиатурой до пустой строки и увести фокус (Tab или клик вне поля).",
+        "expected": "- Поле возвращается к отображению **0**\n- В теле PATCH в `data` для Ground Level передаётся число **0**"
+      }
+    ]
+  },
+  {
+    "section_id": 7816,
+    "title": "Clear Water Depth with \"X\" icon",
+    "custom_preconds": "Открыт *Well trajectory*, в секции *Depth Reference* выбран *Type: Offshore*, поле *Water Depth* заполнено числом.",
+    "type_id": 9,
+    "priority_id": 3,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81],
+    "custom_fix_versions": [49, 77],
+    "refs": "DS-7785,DS-12488",
+    "custom_steps_separated": [
+      {
+        "content": "Нажать кнопку «X» в поле *Water Depth*",
+        "expected": "- Поле отображает **0**\n- В теле PATCH в `data` для Water Depth передаётся число **0**"
+      }
+    ]
+  },
+  {
+    "section_id": 7816,
+    "title": "Clear Water Depth with Backspace",
+    "custom_preconds": "Открыт *Well trajectory*, в секции *Depth Reference* выбран *Type: Offshore*, поле *Water Depth* заполнено.",
+    "type_id": 9,
+    "priority_id": 3,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81],
+    "custom_fix_versions": [49, 77],
+    "refs": "DS-7785,DS-12549",
+    "custom_steps_separated": [
+      {
+        "content": "Стереть значение в *Water Depth* клавиатурой до пустой строки и увести фокус (Tab или клик вне поля).",
+        "expected": "- Поле возвращается к отображению **0**\n- В теле PATCH в `data` для Water Depth передаётся число **0**"
+      }
+    ]
+  },
+  {
+    "section_id": 8038,
+    "title": "Clear Vertical with \"X\" icon",
+    "custom_preconds": "Открыт *Well trajectory*, в секции *Location Uncertainty* поле *Vertical* заполнено числом.",
+    "type_id": 9,
+    "priority_id": 3,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81],
+    "custom_fix_versions": [49, 79],
+    "refs": "DS-7786,DS-12538",
+    "custom_steps_separated": [
+      {
+        "content": "Нажать кнопку «X» в поле *Vertical*",
+        "expected": "- Поле отображает **0**\n- В теле PATCH в `data` для Vertical передаётся число **0**"
+      }
+    ]
+  },
+  {
+    "section_id": 8038,
+    "title": "Clear Horizontal with \"X\" icon",
+    "custom_preconds": "Открыт *Well trajectory*, в секции *Location Uncertainty* поле *Horizontal* заполнено числом.",
+    "type_id": 9,
+    "priority_id": 3,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81],
+    "custom_fix_versions": [49, 79],
+    "refs": "DS-7786,DS-12538",
+    "custom_steps_separated": [
+      {
+        "content": "Нажать кнопку «X» в поле *Horizontal*",
+        "expected": "- Поле отображает **0**\n- В теле PATCH в `data` для Horizontal передаётся число **0**"
+      }
+    ]
+  },
+  {
+    "section_id": 8038,
+    "title": "Clear Vertical with Backspace",
+    "custom_preconds": "Открыт *Well trajectory*, в секции *Location Uncertainty* поле *Vertical* заполнено (в т.ч. 0).",
+    "type_id": 9,
+    "priority_id": 3,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81],
+    "custom_fix_versions": [49, 79],
+    "refs": "DS-7786,DS-12549",
+    "custom_steps_separated": [
+      {
+        "content": "Стереть значение в *Vertical* клавиатурой до пустой строки и увести фокус (Tab или клик вне поля).",
+        "expected": "- Поле возвращается к отображению **0**\n- В теле PATCH в `data` для Vertical передаётся число **0**"
+      }
+    ]
+  },
+  {
+    "section_id": 8038,
+    "title": "Clear Horizontal with Backspace",
+    "custom_preconds": "Открыт *Well trajectory*, в секции *Location Uncertainty* поле *Horizontal* заполнено.",
+    "type_id": 9,
+    "priority_id": 3,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81],
+    "custom_fix_versions": [49, 79],
+    "refs": "DS-7786,DS-12549",
+    "custom_steps_separated": [
+      {
+        "content": "Стереть значение в *Horizontal* клавиатурой до пустой строки и увести фокус (Tab или клик вне поля).",
+        "expected": "- Поле возвращается к отображению **0**\n- В теле PATCH в `data` для Horizontal передаётся число **0**"
+      }
+    ]
+  },
+  {
+    "section_id": 25188,
+    "title": "Clear API with \"X\" icon",
+    "custom_preconds": "Открыт *Well trajectory*, в секции *Well* поле *API* заполнено.",
+    "type_id": 9,
+    "priority_id": 3,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81],
+    "custom_fix_versions": [49],
+    "refs": "DS-7780,DS-7781",
+    "custom_steps_separated": [
+      {
+        "content": "Нажать кнопку «X» в поле *API*",
+        "expected": "- Поле *API* отображается пустым\n- В теле PATCH в `data` передаётся: `\"api\": \"\"`"
+      }
+    ]
+  },
+  {
+    "section_id": 25188,
+    "title": "Clear API with Backspace",
+    "custom_preconds": "Открыт *Well trajectory*, в секции *Well* поле *API* заполнено.",
+    "type_id": 9,
+    "priority_id": 3,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81],
+    "custom_fix_versions": [49],
+    "refs": "DS-7780,DS-7781",
+    "custom_steps_separated": [
+      {
+        "content": "Удалить значение в *API* клавишами Backspace/Delete до пустой строки и увести фокус (Tab или клик вне поля).",
+        "expected": "- Поле *API* остаётся пустым\n- В теле PATCH в `data` передаётся: `\"api\": \"\"`"
+      }
+    ]
+  },
+  {
+    "section_id": 25188,
+    "title": "Clear Operator with \"X\" icon",
+    "custom_preconds": "Открыт *Well trajectory*, в секции *Well* поле *Operator* заполнено.",
+    "type_id": 9,
+    "priority_id": 3,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81],
+    "custom_fix_versions": [49],
+    "refs": "DS-7780,DS-7781",
+    "custom_steps_separated": [
+      {
+        "content": "Нажать кнопку «X» в поле *Operator*",
+        "expected": "- Поле *Operator* отображается пустым\n- В теле PATCH в `well_attributes_values.values` для Operator передаётся пустая строка"
+      }
+    ]
+  },
+  {
+    "section_id": 25188,
+    "title": "Clear Operator with Backspace",
+    "custom_preconds": "Открыт *Well trajectory*, в секции *Well* поле *Operator* заполнено.",
+    "type_id": 9,
+    "priority_id": 3,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81],
+    "custom_fix_versions": [49],
+    "refs": "DS-7780,DS-7781",
+    "custom_steps_separated": [
+      {
+        "content": "Удалить значение в *Operator* клавишами Backspace/Delete до пустой строки и увести фокус (Tab или клик вне поля).",
+        "expected": "- Поле *Operator* остаётся пустым\n- В теле PATCH в `well_attributes_values.values` для Operator передаётся пустая строка"
+      }
+    ]
+  },
+  {
+    "section_id": 8193,
+    "title": "Clear Field Strength with \"X\" icon",
+    "custom_preconds": "Открыт *Well trajectory*, в секции *Magnetics* выбран *Model Name: User Defined*, поле *Field Strength* заполнено числом.",
+    "type_id": 9,
+    "priority_id": 3,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81],
+    "custom_fix_versions": [49],
+    "refs": "DS-7788",
+    "custom_steps_separated": [
+      {
+        "content": "Нажать кнопку «X» в поле *Field Strength*",
+        "expected": "- Поле отображает **0**\n- В теле PATCH в `data` для Field Strength передаётся число **0**"
+      }
+    ]
+  },
+  {
+    "section_id": 8193,
+    "title": "Clear Field Strength with Backspace",
+    "custom_preconds": "Открыт *Well trajectory*, в секции *Magnetics* выбран *Model Name: User Defined*, поле *Field Strength* заполнено.",
+    "type_id": 9,
+    "priority_id": 3,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81],
+    "custom_fix_versions": [49],
+    "refs": "DS-7788",
+    "custom_steps_separated": [
+      {
+        "content": "Стереть значение в *Field Strength* клавиатурой до пустой строки и увести фокус (Tab или клик вне поля).",
+        "expected": "- Поле возвращается к отображению **0**\n- В теле PATCH в `data` для Field Strength передаётся число **0**"
+      }
+    ]
+  },
+  {
+    "section_id": 8193,
+    "title": "Clear Dip Angle with \"X\" icon",
+    "custom_preconds": "Открыт *Well trajectory*, в секции *Magnetics* выбран *Model Name: User Defined*, поле *Dip Angle* заполнено числом.",
+    "type_id": 9,
+    "priority_id": 3,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81],
+    "custom_fix_versions": [49],
+    "refs": "DS-7788",
+    "custom_steps_separated": [
+      {
+        "content": "Нажать кнопку «X» в поле *Dip Angle*",
+        "expected": "- Поле отображает **0**\n- В теле PATCH в `data` для Dip Angle передаётся число **0**"
+      }
+    ]
+  },
+  {
+    "section_id": 8193,
+    "title": "Clear Dip Angle with Backspace",
+    "custom_preconds": "Открыт *Well trajectory*, в секции *Magnetics* выбран *Model Name: User Defined*, поле *Dip Angle* заполнено.",
+    "type_id": 9,
+    "priority_id": 3,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81],
+    "custom_fix_versions": [49],
+    "refs": "DS-7788",
+    "custom_steps_separated": [
+      {
+        "content": "Стереть значение в *Dip Angle* клавиатурой до пустой строки и увести фокус (Tab или клик вне поля).",
+        "expected": "- Поле возвращается к отображению **0**\n- В теле PATCH в `data` для Dip Angle передаётся число **0**"
+      }
+    ]
+  },
+  {
+    "section_id": 8193,
+    "title": "Clear Declination with \"X\" icon",
+    "custom_preconds": "Открыт *Well trajectory*, в секции *Magnetics* выбран *Model Name: User Defined*, поле *Declination* заполнено числом.",
+    "type_id": 9,
+    "priority_id": 3,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81],
+    "custom_fix_versions": [49],
+    "refs": "DS-7788",
+    "custom_steps_separated": [
+      {
+        "content": "Нажать кнопку «X» в поле *Declination*",
+        "expected": "- Поле отображает **0**\n- В теле PATCH в `data` для Declination передаётся число **0**"
+      }
+    ]
+  },
+  {
+    "section_id": 8193,
+    "title": "Clear Declination with Backspace",
+    "custom_preconds": "Открыт *Well trajectory*, в секции *Magnetics* выбран *Model Name: User Defined*, поле *Declination* заполнено.",
+    "type_id": 9,
+    "priority_id": 3,
+    "custom_automation": 1,
+    "custom_automation_type": 0,
+    "labels": [81],
+    "custom_fix_versions": [49],
+    "refs": "DS-7788",
+    "custom_steps_separated": [
+      {
+        "content": "Стереть значение в *Declination* клавиатурой до пустой строки и увести фокус (Tab или клик вне поля).",
+        "expected": "- Поле возвращается к отображению **0**\n- В теле PATCH в `data` для Declination передаётся число **0**"
+      }
+    ]
+  }
+]

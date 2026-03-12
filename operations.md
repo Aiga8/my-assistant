@@ -91,3 +91,6 @@ cd "C:\work\solo-rtm\playwright"$env:HEADED_SLOW="1"npx playwright test tests/Le
 
 Меняй только строку с названием теста (test(...) или it(...)) в .spec.ts, остальной код не трогай.
 ```
+
+
+node modules/01-autotest-coverage/testrail_export_section_subtree.mjs --project 5 --root-section 6277 --out tasks/QAA-6369
